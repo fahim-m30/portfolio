@@ -3,137 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Fahim Muntasir</title>
+    <title>Contact — Fahim Muntasir</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo"><a href="index.html"><span class="logo-bracket">&lt;</span>FM<span class="logo-bracket">/&gt;</span></a></div>
-                <div class="nav-menu" id="navMenu">
+            <div class="nav-content">
+                <div class="logo">Fahim<span>.</span></div>
+                <div class="nav-links">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="contact.html" class="nav-link active">Contact</a>
-                    <a href="contact.html" class="nav-cta">Hire Me</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.html" class="nav-btn">Let's Talk</a>
                 </div>
-                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+                <div class="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </nav>
 
-    <section class="page-header">
-        <div class="page-header-shapes"><div class="ph-shape ph-shape-1"></div><div class="ph-shape ph-shape-2"></div></div>
+    <div class="page-header">
         <div class="container">
-            <div class="section-label">Say Hello</div>
-            <h1>Get In <span class="gradient-text">Touch</span></h1>
-            <p>Let's discuss your project and how I can help</p>
+            <h1>Get In Touch</h1>
+            <p>Let's connect and discuss opportunities</p>
         </div>
-    </section>
+    </div>
 
-    <section class="contact-section section-pad">
+    <section class="section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-form-wrapper reveal">
-                    <div class="section-label">Send a Message</div>
-                    <h2>Let's <span class="gradient-text">Talk</span></h2>
-                    <form id="contact-form" class="contact-form" novalidate>
-                        <div class="form-group floating">
-                            <input type="text" id="name" name="name" placeholder=" " required>
-                            <label for="name">Full Name *</label>
-                            <div class="form-line"></div>
+                <div class="contact-form reveal">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
                         </div>
-                        <div class="form-group floating">
-                            <input type="email" id="email" name="email" placeholder=" " required>
-                            <label for="email">Email Address *</label>
-                            <div class="form-line"></div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
                         </div>
-                        <div class="form-group floating">
-                            <input type="text" id="subject" name="subject" placeholder=" " required>
-                            <label for="subject">Subject *</label>
-                            <div class="form-line"></div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Project inquiry" required>
                         </div>
-                        <div class="form-group floating">
-                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-                            <label for="message">Your Message *</label>
-                            <div class="form-line"></div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell me about your project or opportunity..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
-                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
                 </div>
 
-                <div class="contact-info-wrapper reveal reveal-right">
-                    <div class="section-label">Contact Info</div>
-                    <h2>Reach <span class="gradient-text">Out</span></h2>
-                    <div class="contact-info-cards">
-                        <div class="contact-info-card">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div><h4>Location</h4><p>Dhaka, Bangladesh</p></div>
-                        </div>
-                        <div class="contact-info-card">
+                <div class="contact-info reveal">
+                    <h2>Contact Information</h2>
+                    <div class="contact-cards">
+                        <div class="contact-card">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div><h4>Email</h4><p><a href="mailto:fmuntasir488@gmail.com">fmuntasir488@gmail.com</a></p></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:fmuntasir488@gmail.com">fmuntasir488@gmail.com</a>
+                            </div>
                         </div>
-                        <div class="contact-info-card">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div><h4>Phone</h4><p><a href="tel:+8801234567890">+880 1234 567890</a></p></div>
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Dhaka, Bangladesh</p>
+                            </div>
                         </div>
-                        <div class="contact-info-card">
+                        <div class="contact-card">
                             <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <div><h4>Response Time</h4><p>Usually within 24 hours</p></div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Usually within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-user-check"></i></div>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open to opportunities</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="social-contact">
-                        <h3>Follow Me</h3>
-                        <div class="social-links-contact">
-                            <a href="https://www.linkedin.com" target="_blank" class="social-link-large"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
-                            <a href="https://www.github.com" target="_blank" class="social-link-large"><i class="fab fa-github"></i><span>GitHub</span></a>
-                            <a href="https://twitter.com" target="_blank" class="social-link-large"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a href="https://www.instagram.com" target="_blank" class="social-link-large"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                        </div>
+                    <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.1rem;">Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section section-pad bg-light">
-        <div class="container">
-            <div class="section-label reveal">FAQ</div>
-            <h2 class="section-title reveal">Frequently Asked <span class="gradient-text">Questions</span></h2>
-            <div class="faq-accordion" id="faqAccordion">
-                <div class="faq-item reveal" data-delay="0">
-                    <div class="faq-question"><h3>What's your turnaround time?</h3><i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>Turnaround time depends on scope. Small projects take 2–4 weeks, larger ones 8–12 weeks.</p></div>
-                </div>
-                <div class="faq-item reveal" data-delay="50">
-                    <div class="faq-question"><h3>Do you provide ongoing support?</h3><i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>Yes, I offer maintenance and support packages for all projects. We can discuss your specific needs.</p></div>
-                </div>
-                <div class="faq-item reveal" data-delay="100">
-                    <div class="faq-question"><h3>What's your pricing structure?</h3><i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>I offer flexible pricing: project-based, hourly rates, or retainer packages depending on your needs.</p></div>
-                </div>
-                <div class="faq-item reveal" data-delay="150">
-                    <div class="faq-question"><h3>Do you work with existing websites?</h3><i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>Absolutely! I can redesign, rebuild, or enhance your existing website and provide migration services.</p></div>
-                </div>
-                <div class="faq-item reveal" data-delay="200">
-                    <div class="faq-question"><h3>Can you help with project planning?</h3><i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>Yes, I help with planning, architecture & strategy. Let's discuss your goals and I'll recommend the best approach.</p></div>
-                </div>
-                <div class="faq-item reveal" data-delay="250">
-                    <div class="faq-question"><h3>How do we communicate?</h3><i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>Via email, phone, or video calls. I'll keep you updated regularly with progress reports and prototypes.</p></div>
                 </div>
             </div>
         </div>
@@ -141,23 +108,46 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-logo"><span class="logo-bracket">&lt;</span>FM<span class="logo-bracket">/&gt;</span></div>
-                    <p>Full Stack Developer & UI/UX Designer.</p>
+                    <h3>Fahim<span>.</span></h3>
+                    <p>Fresh CSE graduate passionate about web development and building meaningful projects.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-                <div class="footer-contact"><h4>Contact</h4><p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p><p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p></div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="projects.html">Web Apps</a></li>
+                        <li><a href="projects.html">Websites</a></li>
+                        <li><a href="projects.html">Academic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Fahim Muntasir. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p><a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fahim Muntasir. All rights reserved.</p>
+                <a href="#" class="back-top"><i class="fas fa-arrow-up"></i></a>
+            </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>

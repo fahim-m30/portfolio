@@ -3,193 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Fahim Muntasir</title>
+    <title>Projects — Fahim Muntasir</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo"><a href="index.html"><span class="logo-bracket">&lt;</span>FM<span class="logo-bracket">/&gt;</span></a></div>
-                <div class="nav-menu" id="navMenu">
+            <div class="nav-content">
+                <div class="logo">Fahim<span>.</span></div>
+                <div class="nav-links">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
-                    <a href="projects.html" class="nav-link active">Projects</a>
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="contact.html" class="nav-cta">Hire Me</a>
+                    <a href="contact.html" class="nav-btn">Let's Talk</a>
                 </div>
-                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+                <div class="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </nav>
 
-    <section class="page-header">
-        <div class="page-header-shapes"><div class="ph-shape ph-shape-1"></div><div class="ph-shape ph-shape-2"></div></div>
+    <div class="page-header">
         <div class="container">
-            <div class="section-label">My Work</div>
-            <h1>Featured <span class="gradient-text">Projects</span></h1>
-            <p>Showcase of my recent work and accomplishments</p>
+            <h1>My Projects</h1>
+            <p>A collection of my academic and personal projects</p>
         </div>
-    </section>
+    </div>
 
-    <section class="filter-section">
+    <section class="section">
         <div class="container">
-            <div class="filter-buttons">
+            <div class="filter-bar">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web">Web Dev</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="website">Websites</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Web App</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce application with product catalog, shopping cart, user authentication, and payment integration.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Web App</span>
+                        <h3>Task Manager</h3>
+                        <p>Task management application with real-time updates, user collaboration, and project organization features.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="website">
+                    <div class="project-icon"><i class="fas fa-blog"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Website</span>
+                        <h3>Personal Blog</h3>
+                        <p>Responsive blog website with markdown support, dynamic content management, and SEO optimization.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Markdown</span>
+                            <span>CSS Modules</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Web App</span>
+                        <h3>Weather Dashboard</h3>
+                        <p>Weather application with real-time data, location search, and 7-day forecast using weather API.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Weather API</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="academic">
+                    <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Academic</span>
+                        <h3>Student Management System</h3>
+                        <p>University project for managing student records, courses, grades, and attendance tracking.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="website">
+                    <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Website</span>
+                        <h3>Restaurant Website</h3>
+                        <p>Modern restaurant website with menu display, online reservation system, and contact form.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="academic">
+                    <div class="project-icon"><i class="fas fa-book"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Academic</span>
+                        <h3>Library Management System</h3>
+                        <p>Database project for managing library books, members, borrowing records, and due dates.</p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-info-circle"></i> Details</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-icon"><i class="fas fa-comments"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Web App</span>
+                        <h3>Chat Application</h3>
+                        <p>Real-time chat application with private messaging, group chats, and online status indicators.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Socket.io</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="website">
+                    <div class="project-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Website</span>
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio website showcasing projects, skills, and contact information with modern design.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="projects-section section-pad">
+    <section class="cta-section">
         <div class="container">
-            <div class="projects-grid" id="projectsGrid">
-                <div class="project-card tilt-card reveal" data-category="web">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-store"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-badge-tag">Web App</div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>Full-stack e-commerce with React, Node.js & MongoDB. Features product catalog, cart & secure payment.</p>
-                    <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-                    <div class="project-links-row">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#" class="link-btn link-btn-outline"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card reveal" data-category="web" data-delay="100">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-chart-line"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-badge-tag">Dashboard</div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Real-time data visualization with Vue.js & Chart.js. Interactive charts, filters & export capabilities.</p>
-                    <div class="project-tech"><span>Vue.js</span><span>Chart.js</span><span>API</span></div>
-                    <div class="project-links-row">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#" class="link-btn link-btn-outline"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card reveal" data-category="design" data-delay="200">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-mobile-alt"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-badge-tag">Design</div>
-                    <h3>Mobile App Design</h3>
-                    <p>Complete mobile app design system in Figma. Wireframes, prototypes & high-fidelity designs.</p>
-                    <div class="project-tech"><span>Figma</span><span>UI Design</span><span>Prototype</span></div>
-                    <div class="project-links-row">
-                        <a href="#" class="link-btn"><i class="fas fa-eye"></i> View Design</a>
-                        <a href="#" class="link-btn link-btn-outline"><i class="fas fa-link"></i> Prototype</a>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card reveal" data-category="web" data-delay="0">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-blog"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-badge-tag">CMS</div>
-                    <h3>Blog Platform</h3>
-                    <p>Content management system with markdown support, user auth & comment system using Next.js & Firebase.</p>
-                    <div class="project-tech"><span>Next.js</span><span>Firebase</span><span>CMS</span></div>
-                    <div class="project-links-row">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#" class="link-btn link-btn-outline"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card reveal" data-category="mobile" data-delay="100">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-tasks"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="#" class="overlay-btn"><i class="fas fa-info-circle"></i></a>
-                            <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-badge-tag">Mobile</div>
-                    <h3>Task Manager App</h3>
-                    <p>Mobile task management with real-time sync, notifications & offline support using React Native.</p>
-                    <div class="project-tech"><span>React Native</span><span>Firebase</span><span>Mobile</span></div>
-                    <div class="project-links-row">
-                        <a href="#" class="link-btn"><i class="fas fa-info-circle"></i> Details</a>
-                        <a href="#" class="link-btn link-btn-outline"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card reveal" data-category="design" data-delay="200">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-palette"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-badge-tag">Design System</div>
-                    <h3>Design System</h3>
-                    <p>Comprehensive design system with reusable components, typography, color palettes & guidelines.</p>
-                    <div class="project-tech"><span>Design System</span><span>Components</span><span>Figma</span></div>
-                    <div class="project-links-row">
-                        <a href="#" class="link-btn"><i class="fas fa-eye"></i> View System</a>
-                        <a href="#" class="link-btn link-btn-outline"><i class="fas fa-book"></i> Docs</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section section-pad">
-        <div class="container">
-            <div class="cta-box reveal">
-                <div class="cta-bg-glow"></div>
-                <h2>Have a Project in <span class="gradient-text">Mind?</span></h2>
-                <p>Let's discuss your requirements and how I can help.</p>
-                <a href="contact.html" class="btn btn-white"><i class="fas fa-paper-plane"></i> Start a Project</a>
-            </div>
+            <h2>Have a Project Idea?</h2>
+            <p>I'm always interested in working on new projects and learning opportunities.</p>
+            <a href="contact.html" class="btn btn-white"><i class="fas fa-paper-plane"></i> Let's Discuss</a>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-logo"><span class="logo-bracket">&lt;</span>FM<span class="logo-bracket">/&gt;</span></div>
-                    <p>Full Stack Developer & UI/UX Designer.</p>
+                    <h3>Fahim<span>.</span></h3>
+                    <p>Fresh CSE graduate passionate about web development and building meaningful projects.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-                <div class="footer-contact"><h4>Contact</h4><p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p><p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p></div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="projects.html">Web Apps</a></li>
+                        <li><a href="projects.html">Websites</a></li>
+                        <li><a href="projects.html">Academic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Fahim Muntasir. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p><a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fahim Muntasir. All rights reserved.</p>
+                <a href="#" class="back-top"><i class="fas fa-arrow-up"></i></a>
+            </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>

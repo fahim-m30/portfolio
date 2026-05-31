@@ -3,293 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahim Muntasir | Full Stack Developer & Designer</title>
+    <title>Fahim Muntasir — CSE Graduate & Developer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="index.html"><span class="logo-bracket">&lt;</span>FM<span class="logo-bracket">/&gt;</span></a>
-                </div>
-                <div class="nav-menu" id="navMenu">
-                    <a href="index.html" class="nav-link active">Home</a>
+            <div class="nav-content">
+                <div class="logo">Fahim<span>.</span></div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="services.html" class="nav-link">Services</a>
                     <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="contact.html" class="nav-cta">Hire Me</a>
+                    <a href="contact.html" class="nav-btn">Let's Talk</a>
                 </div>
-                <div class="hamburger" id="hamburger">
-                    <span></span><span></span><span></span>
-                </div>
+                <div class="hamburger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <canvas id="particles-canvas"></canvas>
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
+    <section class="hero">
         <div class="container">
-            <div class="hero-content reveal">
-                <div class="hero-badge"><span class="pulse-dot"></span> Available for Projects</div>
-                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Fahim Muntasir</span></h1>
-                <h2 class="hero-typed">I build <span id="typed-text"></span><span class="typed-cursor">|</span></h2>
-                <p class="hero-description">Full Stack Developer & UI/UX Designer crafting scalable, user-centric digital products that drive real business growth.</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Start a Project</a>
-                    <a href="projects.html" class="btn btn-outline"><i class="fas fa-briefcase"></i> View Work</a>
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge"><span class="pulse-dot"></span> Open to opportunities</div>
+                    <h1>Hi, I'm <span>Fahim Muntasir</span></h1>
+                    <p class="hero-subtitle">Fresh CSE graduate passionate about building web applications and solving problems through code.</p>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+                        <a href="contact.html" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+                    </div>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat-item"><span class="counter" data-target="20">0</span>+<p>Projects Done</p></div>
-                    <div class="stat-item"><span class="counter" data-target="5">0</span>+<p>Years Exp.</p></div>
-                    <div class="stat-item"><span class="counter" data-target="100">0</span>%<p>Satisfaction</p></div>
-                </div>
-            </div>
-            <div class="hero-visual reveal reveal-right">
-                <div class="hero-card-wrapper">
-                    <div class="hero-profile-card">
-                        <div class="profile-avatar"><i class="fas fa-laptop-code"></i></div>
-                        <div class="floating-badge badge-react"><i class="fab fa-react"></i> React</div>
-                        <div class="floating-badge badge-node"><i class="fab fa-node-js"></i> Node</div>
-                        <div class="floating-badge badge-figma"><i class="fab fa-figma"></i> Figma</div>
-                        <div class="floating-badge badge-python"><i class="fab fa-python"></i> Python</div>
+                <div class="hero-photo-card">
+                    <div class="photo-circle">
+                        <img src="images/profile.jpg" alt="Fahim Muntasir">
+                    </div>
+                    <h3>Fahim Muntasir</h3>
+                    <p>CSE Graduate | Web Developer</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator"><div class="scroll-mouse"><div class="scroll-wheel"></div></div><span>Scroll Down</span></div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="services-highlight section-pad">
+    <section class="section">
         <div class="container">
-            <div class="section-label reveal">What I Offer</div>
-            <h2 class="section-title reveal">Turning Ideas Into <span class="gradient-text">Reality</span></h2>
-            <div class="services-cards">
-                <div class="service-highlight-card reveal" data-delay="0">
-                    <div class="card-glow"></div>
-                    <div class="service-icon-wrap"><i class="fas fa-code"></i></div>
+            <div class="section-header">
+                <div class="section-label">What I Do</div>
+                <h2 class="section-title">Skills & <span>Expertise</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
                     <h3>Web Development</h3>
-                    <p>Custom websites & web apps with React, Vue.js, and Node.js — fast, scalable, and beautiful.</p>
-                    <a href="services.html" class="card-arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    <p>Building responsive websites and web applications using modern technologies like React, Node.js, and MongoDB.</p>
                 </div>
-                <div class="service-highlight-card reveal" data-delay="100">
-                    <div class="card-glow"></div>
-                    <div class="service-icon-wrap"><i class="fas fa-paint-brush"></i></div>
-                    <h3>UI/UX Design</h3>
-                    <p>User-centered designs that are visually stunning and drive conversions through great UX.</p>
-                    <a href="services.html" class="card-arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>Creating user-friendly interfaces with HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.</p>
                 </div>
-                <div class="service-highlight-card reveal" data-delay="200">
-                    <div class="card-glow"></div>
-                    <div class="service-icon-wrap"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Mobile Development</h3>
-                    <p>Cross-platform mobile apps using React Native with smooth performance on iOS & Android.</p>
-                    <a href="services.html" class="card-arrow-link">Explore <i class="fas fa-arrow-right"></i></a>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3>Backend Development</h3>
+                    <p>Developing server-side applications with Node.js, Express, and working with databases like MongoDB and PostgreSQL.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="featured-projects section-pad">
+    <section class="section" style="background: var(--bg-gray);">
         <div class="container">
-            <div class="section-label reveal">Portfolio</div>
-            <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
-            <div class="projects-preview">
-                <div class="project-card tilt-card reveal" data-delay="0">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-globe"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="projects.html" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            <div class="section-header">
+                <div class="section-label">Portfolio</div>
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Web App</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce application with product catalog, shopping cart, and user authentication.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                    <div class="project-badge-tag">Web App</div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>Full-stack e-commerce with advanced product management, payment integration & analytics.</p>
-                    <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-                    <a href="projects.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="project-card tilt-card reveal" data-delay="100">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-chart-line"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="projects.html" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <div class="project-card reveal">
+                    <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Web App</span>
+                        <h3>Task Manager</h3>
+                        <p>Task management application with real-time updates and user collaboration features.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                    <div class="project-badge-tag">Dashboard</div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Real-time data visualization with interactive charts, filtering, and export capabilities.</p>
-                    <div class="project-tech"><span>Vue.js</span><span>Chart.js</span><span>API</span></div>
-                    <a href="projects.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="project-card tilt-card reveal" data-delay="200">
-                    <div class="project-img-wrap">
-                        <div class="project-img-bg"><i class="fas fa-mobile-alt"></i></div>
-                        <div class="project-overlay-hover">
-                            <a href="projects.html" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <div class="project-card reveal">
+                    <div class="project-icon"><i class="fas fa-blog"></i></div>
+                    <div class="project-body">
+                        <span class="project-tag">Website</span>
+                        <h3>Personal Blog</h3>
+                        <p>Responsive blog website with markdown support and dynamic content management.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>Markdown</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                    <div class="project-badge-tag">Design</div>
-                    <h3>Mobile App Design System</h3>
-                    <p>Comprehensive design system with components, patterns & guidelines for mobile apps.</p>
-                    <div class="project-tech"><span>Figma</span><span>Design System</span><span>Prototype</span></div>
-                    <a href="projects.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="view-all reveal">
-                <a href="projects.html" class="btn btn-primary"><i class="fas fa-th-large"></i> View All Projects</a>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="projects.html" class="btn btn-secondary">View All Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Tech Stack -->
-    <section class="tech-stack section-pad">
+    <section class="cta-section">
         <div class="container">
-            <div class="section-label reveal">Expertise</div>
-            <h2 class="section-title reveal">Tech <span class="gradient-text">Stack</span></h2>
-            <div class="tech-grid">
-                <div class="tech-card reveal" data-delay="0"><i class="fab fa-react"></i><span>React</span></div>
-                <div class="tech-card reveal" data-delay="50"><i class="fab fa-vuejs"></i><span>Vue.js</span></div>
-                <div class="tech-card reveal" data-delay="100"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                <div class="tech-card reveal" data-delay="150"><i class="fab fa-python"></i><span>Python</span></div>
-                <div class="tech-card reveal" data-delay="200"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-                <div class="tech-card reveal" data-delay="250"><i class="fab fa-figma"></i><span>Figma</span></div>
-                <div class="tech-card reveal" data-delay="300"><i class="fab fa-docker"></i><span>Docker</span></div>
-                <div class="tech-card reveal" data-delay="350"><i class="fab fa-aws"></i><span>AWS</span></div>
-            </div>
+            <h2>Let's Work Together</h2>
+            <p>I'm currently looking for opportunities to grow and contribute. Let's connect!</p>
+            <a href="contact.html" class="btn btn-white"><i class="fas fa-paper-plane"></i> Get In Touch</a>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials-section section-pad">
-        <div class="container">
-            <div class="section-label reveal">Testimonials</div>
-            <h2 class="section-title reveal">What Clients <span class="gradient-text">Say</span></h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal" data-delay="0">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"Fahim delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and communication was outstanding."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SJ</div>
-                        <div><h4>Sarah Johnson</h4><p>CEO, Tech Startup</p></div>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal" data-delay="100">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"Working with Fahim was a game-changer. His expertise in both design and development brought our vision to life in ways we hadn't imagined."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AH</div>
-                        <div><h4>Ahmed Hassan</h4><p>Product Manager, Digital Agency</p></div>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal" data-delay="200">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p class="testimonial-text">"Professional, reliable, and highly skilled. Fahim's ability to understand our business needs and translate them into solutions was invaluable."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">PS</div>
-                        <div><h4>Priya Sharma</h4><p>Founder, E-Commerce Business</p></div>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section class="process-section section-pad">
-        <div class="container">
-            <div class="section-label reveal">How I Work</div>
-            <h2 class="section-title reveal">My <span class="gradient-text">Process</span></h2>
-            <div class="process-timeline">
-                <div class="process-step reveal" data-delay="0"><div class="step-num">01</div><h3>Discovery</h3><p>Understanding your goals & requirements</p></div>
-                <div class="process-connector reveal" data-delay="50"></div>
-                <div class="process-step reveal" data-delay="100"><div class="step-num">02</div><h3>Design</h3><p>Wireframes, prototypes & architecture</p></div>
-                <div class="process-connector reveal" data-delay="150"></div>
-                <div class="process-step reveal" data-delay="200"><div class="step-num">03</div><h3>Build</h3><p>Clean, scalable code with best practices</p></div>
-                <div class="process-connector reveal" data-delay="250"></div>
-                <div class="process-step reveal" data-delay="300"><div class="step-num">04</div><h3>Launch</h3><p>QA testing & smooth deployment</p></div>
-                <div class="process-connector reveal" data-delay="350"></div>
-                <div class="process-step reveal" data-delay="400"><div class="step-num">05</div><h3>Support</h3><p>Ongoing maintenance & updates</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section section-pad">
-        <div class="container">
-            <div class="cta-box reveal">
-                <div class="cta-bg-glow"></div>
-                <h2>Ready to Build Something <span class="gradient-text">Amazing?</span></h2>
-                <p>Let's discuss your project and bring your vision to life.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-white"><i class="fas fa-paper-plane"></i> Get In Touch</a>
-                    <a href="projects.html" class="btn btn-outline-white"><i class="fas fa-briefcase"></i> View My Work</a>
-                </div>
-                <div class="cta-contact-info">
-                    <span><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</span>
-                    <span><i class="fas fa-phone"></i> +880 1234 567890</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-logo"><span class="logo-bracket">&lt;</span>FM<span class="logo-bracket">/&gt;</span></div>
-                    <p>Full Stack Developer & UI/UX Designer creating digital excellence.</p>
+                    <h3>Fahim<span>.</span></h3>
+                    <p>Fresh CSE graduate passionate about web development and building meaningful projects.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                         <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+                <div>
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="services.html">Services</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
+                <div>
+                    <h4>Projects</h4>
                     <ul>
-                        <li><a href="services.html">Web Development</a></li>
-                        <li><a href="services.html">UI/UX Design</a></li>
-                        <li><a href="services.html">Mobile Apps</a></li>
-                        <li><a href="services.html">Consulting</a></li>
+                        <li><a href="projects.html">Web Apps</a></li>
+                        <li><a href="projects.html">Websites</a></li>
+                        <li><a href="projects.html">Academic</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
+                <div>
                     <h4>Contact</h4>
                     <p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +880 1234 567890</p>
                     <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Fahim Muntasir. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p>
-                <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+                <p>&copy; 2025 Fahim Muntasir. All rights reserved.</p>
+                <a href="#" class="back-top"><i class="fas fa-arrow-up"></i></a>
             </div>
         </div>
     </footer>
