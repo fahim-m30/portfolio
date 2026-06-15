@@ -1,91 +1,98 @@
-// Mobile nav
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
-});
-document.querySelectorAll('.nav-link, .nav-btn').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger?.classList.remove('active');
-        navLinks?.classList.remove('open');
-    });
-});
+const htmlElement = document.documentElement;
+const mobileNavButton = document.getElementById('mobileNavButton');
+const mobileNav = document.getElementById('mobileNav');
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
 
-// Active nav
-const currentPage = location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href') === currentPage) link.classList.add('active');
-});
+function setTheme(theme) {
+  const isDark = theme === 'dark';
+  htmlElement.classList.toggle('dark', isDark);
+  themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+  themeToggle?.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  localStorage.setItem('theme', theme);
+}
 
-// Scroll reveal
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+function getInitialTheme() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || saved === 'light') return saved;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
-// Skill bars animation
-const skillObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-                bar.style.width = bar.dataset.width + '%';
-            });
-            skillObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
-document.querySelectorAll('.skills-grid').forEach(el => skillObserver.observe(el));
+if (themeToggle) {
+  setTheme(getInitialTheme());
+  themeToggle.addEventListener('click', () => {
+    setTheme(htmlElement.classList.contains('dark') ? 'light' : 'dark');
+  });
+}
 
-// Project filter
-document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        document.querySelectorAll('.project-card').forEach(card => {
-            if (filter === 'all' || card.dataset.category === filter) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    });
+mobileNavButton?.addEventListener('click', () => {
+  mobileNav?.classList.toggle('hidden');
 });
 
-// Contact form
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
+document.querySelectorAll('.nav-link').forEach((link) => {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('text-primary', 'font-semibold');
+  }
+  link.addEventListener('click', () => {
+    mobileNav?.classList.add('hidden');
+  });
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach((item) => {
+      item.classList.remove('bg-primary', 'text-white', 'border-primary');
+      item.classList.add('bg-white', 'text-slate-700', 'border-slate-200', 'dark:bg-slate-900', 'dark:text-slate-300');
+    });
+    button.classList.add('bg-primary', 'text-white', 'border-primary');
+    button.classList.remove('bg-white', 'text-slate-700', 'border-slate-200', 'dark:bg-slate-900', 'dark:text-slate-300');
+
+    const filter = button.dataset.filter;
+    document.querySelectorAll('.project-card').forEach((card) => {
+      if (!card.dataset.category || filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
-    
     if (name && email && subject && message) {
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        this.reset();
+      showNotification('Message sent successfully! I will get back to you soon.', 'success');
+      contactForm.reset();
     } else {
-        showNotification('Please fill in all fields.', 'error');
+      showNotification('Please complete all fields before sending.', 'error');
     }
-});
-
-function showNotification(message, type) {
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed; top: 90px; right: 20px; padding: 16px 24px; border-radius: 8px;
-        background: ${type === 'success' ? '#22c55e' : '#ef4444'}; color: white;
-        font-weight: 600; font-size: 0.95rem; z-index: 1000; animation: slideIn 0.3s ease;
-    `;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    setTimeout(() => notification.remove(), 3500);
+  });
 }
 
-const style = document.createElement('style');
-style.textContent = '@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }';
-document.head.appendChild(style);
+function showNotification(message, type) {
+  const notification = document.createElement('div');
+  notification.className = 'notification';
+  notification.style.backgroundColor = type === 'success' ? '#16a34a' : '#ef4444';
+  notification.textContent = message;
+  document.body.appendChild(notification);
+  setTimeout(() => notification.remove(), 3200);
+}

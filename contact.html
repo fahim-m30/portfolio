@@ -1,153 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Fahim Muntasir</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Fahim Muntasir</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            primaryDark: '#4f46e5',
+          },
+          boxShadow: {
+            glow: '0 30px 80px rgba(99,102,241,0.16)',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">Fahim<span>.</span></div>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="contact.html" class="nav-btn">Let's Talk</a>
-                </div>
-                <div class="hamburger"><span></span><span></span><span></span></div>
-            </div>
+<body class="bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-100">
+  <div class="min-h-screen">
+    <nav class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl px-4 py-4 shadow-sm dark:border-slate-800/70 dark:bg-slate-950/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
+        <a href="index.html" class="text-xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">Fahim<span class="text-primary">.</span></a>
+        <div class="hidden items-center gap-6 md:flex">
+          <a href="index.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">Home</a>
+          <a href="about.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">About</a>
+          <a href="projects.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">Projects</a>
+          <a href="services.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">Services</a>
+          <a href="contact.html" class="rounded-2xl bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primaryDark">Let's Talk</a>
         </div>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" aria-label="Toggle light/dark mode" class="theme-toggle inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:-translate-y-0.5 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+            <i id="themeIcon" class="fas fa-moon"></i>
+          </button>
+          <button id="mobileNavButton" aria-label="Open mobile menu" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:-translate-y-0.5 md:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobileNav" class="hidden mt-3 rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-xl dark:border-slate-800 dark:bg-slate-950/95 md:hidden">
+        <div class="flex flex-col gap-3 text-slate-900 dark:text-slate-100">
+          <a href="index.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">Home</a>
+          <a href="about.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">About</a>
+          <a href="projects.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">Projects</a>
+          <a href="services.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">Services</a>
+          <a href="contact.html" class="rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-primaryDark">Let's Talk</a>
+        </div>
+      </div>
     </nav>
 
-    <div class="page-header">
-        <div class="container">
-            <h1>Get In Touch</h1>
-            <p>Let's connect and discuss opportunities</p>
+    <main class="pt-28">
+      <section class="bg-slate-50 py-20 dark:bg-slate-950">
+        <div class="mx-auto max-w-6xl px-4 text-center lg:px-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Contact</p>
+          <h1 class="mt-4 text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl">Let's connect</h1>
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300">Share your idea, request a quote, or just say hi. I'm available for freelance and collaboration.</p>
         </div>
-    </div>
+      </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-form reveal">
-                    <h2>Send a Message</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" placeholder="Project inquiry" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell me about your project or opportunity..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
+      <section class="mx-auto max-w-7xl px-4 pb-20 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+          <div class="rounded-[2rem] border border-slate-200/70 bg-white/90 p-10 shadow-glow dark:border-slate-800/70 dark:bg-slate-900/75">
+            <h2 class="text-3xl font-bold text-slate-950 dark:text-white">Send a Message</h2>
+            <form id="contactForm" class="mt-8 space-y-6">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-semibold text-slate-700 dark:text-slate-200">Your Name</label>
+                <input id="name" type="text" required placeholder="John Doe" class="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition dark:border-slate-800 dark:bg-slate-950 dark:text-white" />
+              </div>
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-semibold text-slate-700 dark:text-slate-200">Email Address</label>
+                <input id="email" type="email" required placeholder="john@example.com" class="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition dark:border-slate-800 dark:bg-slate-950 dark:text-white" />
+              </div>
+              <div class="space-y-2">
+                <label for="subject" class="text-sm font-semibold text-slate-700 dark:text-slate-200">Subject</label>
+                <input id="subject" type="text" required placeholder="Project inquiry" class="w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition dark:border-slate-800 dark:bg-slate-950 dark:text-white" />
+              </div>
+              <div class="space-y-2">
+                <label for="message" class="text-sm font-semibold text-slate-700 dark:text-slate-200">Message</label>
+                <textarea id="message" required placeholder="Tell me about your project or opportunity..." class="h-40 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition dark:border-slate-800 dark:bg-slate-950 dark:text-white"></textarea>
+              </div>
+              <button type="submit" class="w-full rounded-3xl bg-primary px-6 py-4 text-sm font-semibold text-white transition hover:bg-primaryDark">Send Message</button>
+            </form>
+          </div>
 
-                <div class="contact-info reveal">
-                    <h2>Contact Information</h2>
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:fmuntasir488@gmail.com">fmuntasir488@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Dhaka, Bangladesh</p>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <h4>Response Time</h4>
-                                <p>Usually within 24 hours</p>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-user-check"></i></div>
-                            <div>
-                                <h4>Availability</h4>
-                                <p>Open to opportunities</p>
-                            </div>
-                        </div>
+          <div class="space-y-8">
+            <div class="rounded-[2rem] border border-slate-200/70 bg-white/90 p-10 shadow-glow dark:border-slate-800/70 dark:bg-slate-900/75">
+              <h2 class="text-3xl font-bold text-slate-950 dark:text-white">Contact Info</h2>
+              <div class="mt-8 space-y-4">
+                <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950/80">
+                  <div class="flex items-center gap-4">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-lg text-primary dark:bg-indigo-500/10"><i class="fas fa-envelope"></i></div>
+                    <div>
+                      <p class="text-sm font-semibold text-slate-950 dark:text-white">Email</p>
+                      <a href="mailto:fmuntasir488@gmail.com" class="text-sm text-slate-600 dark:text-slate-300">fmuntasir488@gmail.com</a>
                     </div>
-                    <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 1.1rem;">Connect With Me</h3>
-                    <div class="social-links">
-                        <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    </div>
+                  </div>
                 </div>
+                <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950/80">
+                  <div class="flex items-center gap-4">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-lg text-primary dark:bg-indigo-500/10"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                      <p class="text-sm font-semibold text-slate-950 dark:text-white">Location</p>
+                      <p class="text-sm text-slate-600 dark:text-slate-300">Dhaka, Bangladesh</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950/80">
+                  <div class="flex items-center gap-4">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-lg text-primary dark:bg-indigo-500/10"><i class="fas fa-clock"></i></div>
+                    <div>
+                      <p class="text-sm font-semibold text-slate-950 dark:text-white">Response Time</p>
+                      <p class="text-sm text-slate-600 dark:text-slate-300">Usually within 24 hours</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950/80">
+                  <div class="flex items-center gap-4">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-lg text-primary dark:bg-indigo-500/10"><i class="fas fa-user-check"></i></div>
+                    <div>
+                      <p class="text-sm font-semibold text-slate-950 dark:text-white">Availability</p>
+                      <p class="text-sm text-slate-600 dark:text-slate-300">Open to opportunities</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="rounded-[2rem] border border-slate-200/70 bg-white/90 p-10 shadow-glow dark:border-slate-800/70 dark:bg-slate-900/75">
+              <h3 class="text-2xl font-bold text-slate-950 dark:text-white">Connect With Me</h3>
+              <div class="mt-6 flex flex-wrap gap-3 text-slate-900 dark:text-slate-100">
+                <a href="https://linkedin.com" target="_blank" class="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" class="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank" class="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Fahim<span>.</span></h3>
-                    <p>Fresh CSE graduate passionate about web development and building meaningful projects.</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Projects</h4>
-                    <ul>
-                        <li><a href="projects.html">Web Apps</a></li>
-                        <li><a href="projects.html">Websites</a></li>
-                        <li><a href="projects.html">Academic</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Fahim Muntasir. All rights reserved.</p>
-                <a href="#" class="back-top"><i class="fas fa-arrow-up"></i></a>
-            </div>
+    <footer class="border-t border-slate-200/70 bg-white/95 py-12 dark:border-slate-800/70 dark:bg-slate-950/95">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 text-slate-700 dark:text-slate-300 lg:grid-cols-[1.8fr_1fr_1fr_1fr] lg:px-8">
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-slate-950 dark:text-white">Fahim<span class="text-primary">.</span></h3>
+          <p class="max-w-sm text-sm leading-7">Fresh CSE graduate passionate about web development and building meaningful projects.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://linkedin.com" target="_blank" class="rounded-2xl border border-slate-200 bg-white p-3 text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" class="rounded-2xl border border-slate-200 bg-white p-3 text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-github"></i></a>
+          </div>
         </div>
+        <div>
+          <h4 class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="transition hover:text-primary">Home</a></li>
+            <li><a href="about.html" class="transition hover:text-primary">About</a></li>
+            <li><a href="projects.html" class="transition hover:text-primary">Projects</a></li>
+            <li><a href="services.html" class="transition hover:text-primary">Services</a></li>
+            <li><a href="contact.html" class="transition hover:text-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Projects</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="projects.html" class="transition hover:text-primary">Web Apps</a></li>
+            <li><a href="projects.html" class="transition hover:text-primary">Websites</a></li>
+            <li><a href="projects.html" class="transition hover:text-primary">Academic</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Contact</h4>
+          <p class="flex items-center gap-2 text-sm"><i class="fas fa-envelope text-primary"></i> fmuntasir488@gmail.com</p>
+          <p class="mt-3 flex items-center gap-2 text-sm"><i class="fas fa-map-marker-alt text-primary"></i> Dhaka, Bangladesh</p>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-200/70 pt-6 text-center text-sm text-slate-500 dark:border-slate-800/70 dark:text-slate-400">&copy; 2025 Fahim Muntasir. All rights reserved.</div>
     </footer>
-
-    <script src="js/script.js"></script>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

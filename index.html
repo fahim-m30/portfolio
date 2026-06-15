@@ -1,205 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahim Muntasir — CSE Graduate & Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahim Muntasir — Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            primaryDark: '#4f46e5',
+          },
+          boxShadow: {
+            glow: '0 30px 80px rgba(99,102,241,0.16)',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">Fahim<span>.</span></div>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="projects.html" class="nav-link">Projects</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="contact.html" class="nav-btn">Let's Talk</a>
-                </div>
-                <div class="hamburger"><span></span><span></span><span></span></div>
-            </div>
+<body class="bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-100">
+  <div class="min-h-screen">
+    <nav class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl px-4 py-4 shadow-sm dark:border-slate-800/70 dark:bg-slate-950/90">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
+        <a href="index.html" class="text-xl font-semibold tracking-tight text-slate-950 dark:text-slate-100">Fahim<span class="text-primary">.</span></a>
+        <div class="hidden items-center gap-6 md:flex">
+          <a href="index.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">Home</a>
+          <a href="about.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">About</a>
+          <a href="projects.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">Projects</a>
+          <a href="services.html" class="nav-link text-sm text-slate-600 transition hover:text-primary dark:text-slate-300">Services</a>
+          <a href="contact.html" class="rounded-2xl bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primaryDark">Let's Talk</a>
         </div>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" aria-label="Toggle light/dark mode" class="theme-toggle inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:-translate-y-0.5 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+            <i id="themeIcon" class="fas fa-moon"></i>
+          </button>
+          <button id="mobileNavButton" aria-label="Open mobile menu" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:-translate-y-0.5 md:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobileNav" class="hidden mt-3 rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-xl dark:border-slate-800 dark:bg-slate-950/95 md:hidden">
+        <div class="flex flex-col gap-3 text-slate-900 dark:text-slate-100">
+          <a href="index.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">Home</a>
+          <a href="about.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">About</a>
+          <a href="projects.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">Projects</a>
+          <a href="services.html" class="nav-link rounded-2xl px-4 py-3 transition hover:bg-slate-100 dark:hover:bg-slate-900">Services</a>
+          <a href="contact.html" class="rounded-2xl bg-primary px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-primaryDark">Let's Talk</a>
+        </div>
+      </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div>
-                    <div class="hero-badge"><span class="pulse-dot"></span> Open to opportunities</div>
-                    <h1>Hi, I'm <span>Fahim Muntasir</span></h1>
-                    <p class="hero-subtitle">Fresh CSE graduate passionate about building web applications and solving problems through code.</p>
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
-                        <a href="contact.html" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
-                    </div>
-                </div>
-                <div class="hero-photo-card">
-                    <div class="photo-circle">
-                        <img src="images/fahim.jpg" alt="Fahim Muntasir">
-                    </div>
-                    <h3>Fahim Muntasir</h3>
-                    <p>CSE Graduate | Web Developer</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag"><i class="fab fa-react"></i> React</span>
-                        <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
-                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
-                        <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
-                    </div>
-                </div>
-            </div>
+    <main class="pt-28">
+      <section class="mx-auto grid max-w-7xl gap-16 px-4 pb-20 lg:grid-cols-[1.3fr_0.85fr] lg:px-8">
+        <div class="space-y-8">
+          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-200">
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Open to opportunities
+          </span>
+          <div class="space-y-6">
+            <h1 class="text-5xl font-black tracking-tight text-slate-950 dark:text-white sm:text-6xl">Hi, I'm <span class="text-primary">Fahim Muntasir</span></h1>
+            <p class="max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">Fresh CSE graduate building elegant web experiences with clean code and polished design. I focus on modern front-end development, thoughtful interactions, and responsive layouts.</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="projects.html" class="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primaryDark">View Projects</a>
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">Contact Me</a>
+          </div>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">What I Do</div>
-                <h2 class="section-title">Skills & <span>Expertise</span></h2>
+        <div class="rounded-[2rem] border border-slate-200/80 bg-white/90 p-8 shadow-glow backdrop-blur-xl dark:border-slate-800/70 dark:bg-slate-900/75">
+          <div class="flex flex-col items-center gap-5 text-center">
+            <div class="relative overflow-hidden rounded-full border-4 border-primary p-1">
+              <img src="images/fahim.jpg" alt="Fahim Muntasir" class="h-72 w-72 rounded-full object-cover shadow-xl" />
             </div>
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-     
-                    <h3>Web Development</h3>
-                    <p>Building responsive websites and web applications using modern technologies like React, Node.js, and MongoDB.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Frontend Development</h3>
-                    <p>Creating user-friendly interfaces with HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-database"></i></div>
-                    <h3>Backend Development</h3>
-
-
-                    <p>Developing server-side applications with Node.js, Express, and working with databases like MongoDB and PostgreSQL.</p>
-                </div>
+            <div>
+              <h2 class="text-2xl font-bold text-slate-950 dark:text-white">Fahim Muntasir</h2>
+              <p class="mt-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary">CSE Graduate | Web Developer</p>
             </div>
+            <div class="grid w-full grid-cols-2 gap-3">
+              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-700 dark:bg-slate-800 dark:text-slate-200">React</span>
+              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-700 dark:bg-slate-800 dark:text-slate-200">Node.js</span>
+              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-700 dark:bg-slate-800 dark:text-slate-200">Python</span>
+              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-700 dark:bg-slate-800 dark:text-slate-200">Tailwind</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="section" style="background: var(--bg-gray);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Portfolio</div>
-                <h2 class="section-title">Featured <span>Projects</span></h2>
+      <section class="mx-auto max-w-7xl px-4 pb-20 lg:px-8">
+        <div class="grid gap-8">
+          <div class="rounded-[2rem] border border-slate-200/70 bg-white/90 p-10 shadow-glow backdrop-blur-xl dark:border-slate-800/70 dark:bg-slate-900/75">
+            <div class="space-y-4 text-center">
+              <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary">What I Do</p>
+              <h2 class="text-3xl font-bold text-slate-950 dark:text-white">Skills & <span class="text-primary">Expertise</span></h2>
             </div>
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <div class="project-body">
-                        <span class="project-tag">Web App</span>
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-stack e-commerce application with product catalog, shopping cart, and user authentication.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-icon"><i class="fas fa-tasks"></i></div>
-                    <div class="project-body">
-                        <span class="project-tag">Web App</span>
-                        <h3>Task Manager</h3>
-                        <p>Task management application with real-time updates and user collaboration features.</p>
-                        <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>Firebase</span>
-                            <span>Tailwind</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-icon"><i class="fas fa-blog"></i></div>
-                    <div class="project-body">
-                        <span class="project-tag">Website</span>
-                        <h3>Personal Blog</h3>
-                        <p>Responsive blog website with markdown support and dynamic content management.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Markdown</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-btn project-btn-primary"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#" class="project-btn project-btn-outline"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="mt-10 grid gap-6 xl:grid-cols-3">
+              <article class="space-y-4 rounded-[1.75rem] border border-slate-200/80 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900/80">
+                <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-2xl text-primary dark:bg-indigo-500/10"><i class="fas fa-code"></i></div>
+                <h3 class="text-xl font-semibold text-slate-950 dark:text-white">Web Development</h3>
+                <p class="text-sm leading-6 text-slate-600 dark:text-slate-300">Building responsive websites and apps with modern tools, focus on performance and usability.</p>
+              </article>
+              <article class="space-y-4 rounded-[1.75rem] border border-slate-200/80 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900/80">
+                <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-2xl text-primary dark:bg-indigo-500/10"><i class="fas fa-laptop-code"></i></div>
+                <h3 class="text-xl font-semibold text-slate-950 dark:text-white">Frontend Development</h3>
+                <p class="text-sm leading-6 text-slate-600 dark:text-slate-300">Creating clean interfaces and interactive experiences with HTML, CSS, JavaScript, and Tailwind.</p>
+              </article>
+              <article class="space-y-4 rounded-[1.75rem] border border-slate-200/80 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900/80">
+                <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-indigo-100 text-2xl text-primary dark:bg-indigo-500/10"><i class="fas fa-database"></i></div>
+                <h3 class="text-xl font-semibold text-slate-950 dark:text-white">Backend Development</h3>
+                <p class="text-sm leading-6 text-slate-600 dark:text-slate-300">APIs and data-driven apps using Node.js, Express, and reliable database solutions.</p>
+              </article>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="projects.html" class="btn btn-secondary">View All Projects</a>
-            </div>
-        </div>
-    </section>
+          </div>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Let's Work Together</h2>
-            <p>I'm currently looking for opportunities to grow and contribute. Let's connect!</p>
-            <a href="contact.html" class="btn btn-white"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+          <div class="rounded-[2rem] border border-slate-200/70 bg-white/90 p-10 shadow-glow backdrop-blur-xl dark:border-slate-800/70 dark:bg-slate-900/75">
+            <div class="grid gap-6 md:grid-cols-3">
+              <div class="space-y-3 rounded-[1.75rem] bg-slate-50 p-6 dark:bg-slate-900/80">
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Education</p>
+                <p class="text-2xl font-bold text-slate-950 dark:text-white">BSc CSE</p>
+              </div>
+              <div class="space-y-3 rounded-[1.75rem] bg-slate-50 p-6 dark:bg-slate-900/80">
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Location</p>
+                <p class="text-2xl font-bold text-slate-950 dark:text-white">Dhaka, BD</p>
+              </div>
+              <div class="space-y-3 rounded-[1.75rem] bg-slate-50 p-6 dark:bg-slate-900/80">
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Projects</p>
+                <p class="text-2xl font-bold text-slate-950 dark:text-white">10+</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Fahim<span>.</span></h3>
-                    <p>Fresh CSE graduate passionate about web development and building meaningful projects.</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Projects</h4>
-                    <ul>
-                        <li><a href="projects.html">Web Apps</a></li>
-                        <li><a href="projects.html">Websites</a></li>
-                        <li><a href="projects.html">Academic</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> fmuntasir488@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
-                </div>
+      <section class="border-t border-slate-200/70 bg-white/95 py-16 dark:border-slate-800/70 dark:bg-slate-950/80">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <div class="grid gap-8 xl:grid-cols-[1.4fr_1fr]">
+            <div class="rounded-[2rem] border border-slate-200/70 bg-slate-50 p-10 shadow-glow dark:border-slate-800/70 dark:bg-slate-900/75">
+              <h2 class="text-3xl font-bold text-slate-950 dark:text-white">Featured Projects</h2>
+              <p class="mt-3 max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">A curated set of web projects that highlight polished design, interface clarity, and technical skill.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Fahim Muntasir. All rights reserved.</p>
-                <a href="#" class="back-top"><i class="fas fa-arrow-up"></i></a>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/80">
+                <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white"><i class="fas fa-shopping-cart"></i></div>
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Web App</span>
+                <h3 class="mt-3 text-xl font-bold text-slate-950 dark:text-white">E-Commerce</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">A polished storefront experience with product discovery and checkout flow.</p>
+              </div>
+              <div class="rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/80">
+                <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-500 to-violet-600 text-white"><i class="fas fa-tasks"></i></div>
+                <span class="text-xs font-semibold uppercase tracking-[0.25em] text-primary">Web App</span>
+                <h3 class="mt-3 text-xl font-bold text-slate-950 dark:text-white">Task Manager</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">A task system built with clean interaction and responsive layout.</p>
+              </div>
             </div>
+          </div>
+          <div class="mt-10 text-center">
+            <a href="projects.html" class="inline-flex items-center justify-center rounded-2xl bg-primary px-7 py-3 text-sm font-semibold text-white transition hover:bg-primaryDark">View All Projects</a>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200/70 bg-white/95 py-12 dark:border-slate-800/70 dark:bg-slate-950/95">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 text-slate-700 dark:text-slate-300 lg:grid-cols-[1.8fr_1fr_1fr_1fr] lg:px-8">
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-slate-950 dark:text-white">Fahim<span class="text-primary">.</span></h3>
+          <p class="max-w-sm text-sm leading-7">Fresh CSE graduate passionate about web development and building meaningful digital products.</p>
+          <div class="flex items-center gap-3">
+            <a href="https://linkedin.com" target="_blank" class="rounded-2xl border border-slate-200 bg-white p-3 text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" class="rounded-2xl border border-slate-200 bg-white p-3 text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="transition hover:text-primary">Home</a></li>
+            <li><a href="about.html" class="transition hover:text-primary">About</a></li>
+            <li><a href="projects.html" class="transition hover:text-primary">Projects</a></li>
+            <li><a href="services.html" class="transition hover:text-primary">Services</a></li>
+            <li><a href="contact.html" class="transition hover:text-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Projects</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="projects.html" class="transition hover:text-primary">Web Apps</a></li>
+            <li><a href="projects.html" class="transition hover:text-primary">Websites</a></li>
+            <li><a href="projects.html" class="transition hover:text-primary">Academic</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Contact</h4>
+          <p class="flex items-center gap-2 text-sm"><i class="fas fa-envelope text-primary"></i> fmuntasir488@gmail.com</p>
+          <p class="mt-3 flex items-center gap-2 text-sm"><i class="fas fa-map-marker-alt text-primary"></i> Dhaka, Bangladesh</p>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-200/70 pt-6 text-center text-sm text-slate-500 dark:border-slate-800/70 dark:text-slate-400">&copy; 2025 Fahim Muntasir. All rights reserved.</div>
     </footer>
-
-    <script src="js/script.js"></script>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
