@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Fahim Muntasir | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1e293b;
+      --secondary: #475569;
+      --accent: #4f46e5;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.55;
+      padding: 2rem 1rem;
+    }
+
+    .toolbar {
+      max-width: 860px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #4338ca;
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--secondary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+      color: var(--primary);
+    }
+
+    .resume-sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3rem 3.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08);
+      border-radius: 8px;
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .name {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--secondary);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-item:hover {
+      color: var(--accent);
+    }
+
+    .sep {
+      color: #cbd5e1;
+    }
+
+    .section {
+      margin-bottom: 1.4rem;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #0f172a;
+      border-bottom: 1px solid var(--primary);
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .summary-text {
+      font-size: 0.9rem;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .entry {
+      margin-bottom: 0.95rem;
+    }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.92rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .entry-subtitle {
+      font-style: italic;
+      color: #475569;
+      font-size: 0.88rem;
+    }
+
+    .entry-date {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .entry-grade {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .bullet-list {
+      margin-left: 1.25rem;
+      margin-top: 0.25rem;
+      font-size: 0.88rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .bullet-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .skills-table td {
+      padding: 0.25rem 0;
+      vertical-align: top;
+    }
+
+    .skills-table td:first-child {
+      font-weight: 700;
+      color: #0f172a;
+      width: 28%;
+    }
+
+    .skills-table td:last-child {
+      color: #334155;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .resume-sheet {
+        box-shadow: none;
+        padding: 1.5rem 2rem;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen controls -->
+  <div class="toolbar">
+    <a href="index.html" class="btn btn-outline">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <div style="display: flex; gap: 0.75rem;">
+      <button onclick="window.print()" class="btn btn-primary">
+        <i class="fa-solid fa-print"></i> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="resume-sheet">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">Fahim Muntasir</h1>
+      <div class="contact-row">
+        <span class="contact-item"><i class="fa-solid fa-phone"></i> +880 1581876432, +880 1629857561</span>
+        <span class="sep">•</span>
+        <a href="mailto:fmuntasir488@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> fmuntasir488@gmail.com</a>
+        <span class="sep">•</span>
+        <span class="contact-item"><i class="fa-solid fa-location-dot"></i> Banasree, Rampura, Dhaka</span>
+      </div>
+      <div class="contact-row" style="margin-top: 0.35rem;">
+        <a href="https://linkedin.com/in/fahim-muntasir-086b0b26b" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/fahim-muntasir-086b0b26b</a>
+        <span class="sep">•</span>
+        <a href="https://github.com/fahim-m30" target="_blank" class="contact-item"><i class="fa-brands fa-github"></i> github.com/fahim-m30</a>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        I am a Software Engineer and tech researcher blending scalable MERN stack development with advanced machine learning insights. From building robust sports booking, retail POS, and messaging platforms to leveraging my research in federated learning and cybersecurity, I bring a deeply analytical mindset to modern web development. I am passionate about writing clean, production-ready code to deliver secure, intelligent, and highly efficient digital solutions.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">International University of Business Agriculture &amp; Technology (IUBAT)</span>
+          <span class="entry-date">2022 – 2026</span>
+        </div>
+        <div class="entry-head">
+          <span class="entry-subtitle">Bachelor of Computer Science &amp; Engineering</span>
+          <span class="entry-grade">CGPA: 3.50 / 4.00</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Dhaka Imperial College</span>
+          <span class="entry-date">2019 – 2020</span>
+        </div>
+        <div class="entry-head">
+          <span class="entry-subtitle">Higher Secondary Certificate (HSC) – Science</span>
+          <span class="entry-grade">GPA: 4.92 / 5.00</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Software Engineer Intern</span>
+          <span class="entry-date">June 2026 – September 2026</span>
+        </div>
+        <div class="entry-subtitle" style="margin-bottom: 0.35rem;">Zentura Agency • Dhaka, Bangladesh</div>
+        <ul class="bullet-list">
+          <li>Collaborate with cross-functional engineering teams to design, develop, and maintain software applications.</li>
+          <li>Write clean, scalable, and highly maintainable code while adhering to modern industry-standard best practices.</li>
+          <li>Participate in the full software development life cycle (SDLC), utilizing agile methodologies for rapid problem-solving.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <table class="skills-table">
+        <tr>
+          <td>Programming Languages:</td>
+          <td>Python, C/C++, PHP, JavaScript</td>
+        </tr>
+        <tr>
+          <td>Web Technologies:</td>
+          <td>HTML5, CSS3, Tailwind CSS, React, Next.js, Node.js, Express.js, Django</td>
+        </tr>
+        <tr>
+          <td>Databases &amp; Tools:</td>
+          <td>SQL, MySQL, MongoDB, Git, GitHub, VS Code, RESTful APIs</td>
+        </tr>
+        <tr>
+          <td>Core Competencies:</td>
+          <td>Data Structures &amp; Algorithms, Machine Learning, Problem Solving</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Research & Academic Publications -->
+    <section class="section">
+      <h2 class="section-title">Research &amp; Academic Publications</h2>
+      <ul class="bullet-list">
+        <li>
+          <strong>Conference Publication (IEEE SPICSCON 2026):</strong> “A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks.” (Presented, awaiting publication).
+        </li>
+        <li>
+          <strong>Submitted Manuscript:</strong> “An Explainable and Class-Imbalance-Aware Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity Classification from Brain MRI.”
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Software Projects -->
+    <section class="section">
+      <h2 class="section-title">Key Software Projects</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Smart Playground Booking &amp; Tournament Management</span>
+          <span class="entry-date" style="font-style: italic; font-weight: normal;">React, Node.js, MongoDB</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Engineered a full-stack booking and tournament management platform specifically optimized for cricket, football and badminton facilities.</li>
+          <li>Implemented dynamic scheduling features to enhance user experience and streamline administrative tasks.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Online Flight Booking Management System</span>
+          <span class="entry-date" style="font-style: italic; font-weight: normal;">PHP, SQL</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Designed a comprehensive flight reservation system with robust user authentication, advanced search algorithms, and automated PDF ticket generation.</li>
+          <li>Architected the underlying logic and database structure utilizing Data Flow Diagrams (DFD) for optimal system performance.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Shop Manager</span>
+          <span class="entry-date" style="font-style: italic; font-weight: normal;">React, Node.js, MongoDB</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a comprehensive retail and inventory management application featuring real-time stock tracking, point-of-sale (POS) billing, and sales analytics.</li>
+          <li>Implemented secure role-based authentication and automated invoicing to streamline daily shop operations and financial reporting.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Web-Based Secure Messaging Platform</span>
+          <span class="entry-date" style="font-style: italic; font-weight: normal;">PHP, SQL</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a highly scalable web-based messaging platform incorporating secure authentication protocols and real-time communication modules.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Metrorail Membership Management System</span>
+          <span class="entry-date" style="font-style: italic; font-weight: normal;">PHP, MySQL</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Created a centralized management system to seamlessly handle large-scale membership registrations and administrative processes.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Interactive Web Applications (Clock &amp; Snake Game)</span>
+          <span class="entry-date" style="font-style: italic; font-weight: normal;">JavaScript</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Built a real-time digital clock and a classic browser-based Snake game, showcasing strong logic building and DOM manipulation skills.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Training & Certifications -->
+    <section class="section" style="margin-bottom: 0;">
+      <h2 class="section-title">Training &amp; Certifications</h2>
+      <ul class="bullet-list">
+        <li><strong>Generative AI Bootcamp (June 2026):</strong> Completed intensive training on advanced prompt engineering and modern AI workflows.</li>
+        <li><strong>Cybersecurity Training (June 2025):</strong> Acquired foundational cybersecurity and ethical hacking skills with Arena Web Security.</li>
+        <li><strong>Active Computer Education (2019):</strong> Completed foundational IT training covering Microsoft Office, Windows OS, and Typing.</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
