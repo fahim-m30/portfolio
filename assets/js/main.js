@@ -178,7 +178,8 @@ const projectDetails = {
       'Mobile-responsive design optimized for players booking on the go.'
     ],
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'RESTful APIs'],
-    repo: 'https://github.com/fahim-m30'
+    repo: 'https://github.com/fahim-m30',
+    live: 'https://smart-playground-booking-tournament.vercel.app/login.html'
   },
   'shop-manager': {
     title: 'Shop Manager (POS & Inventory Suite)',
@@ -192,7 +193,8 @@ const projectDetails = {
       'Interactive sales analytics graph displaying revenue, top-selling items, and profit margins.'
     ],
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Recharts', 'JWT Auth'],
-    repo: 'https://github.com/fahim-m30'
+    repo: 'https://github.com/fahim-m30',
+    live: 'https://shop-manager-bd.vercel.app/'
   },
   'flight-booking': {
     title: 'Online Flight Booking Management System',
@@ -288,6 +290,16 @@ function initProjectModal() {
 
       const repoBtn = document.getElementById('modal-repo-link');
       if (repoBtn) repoBtn.href = data.repo;
+
+      const liveBtn = document.getElementById('modal-live-link');
+      if (liveBtn) {
+        if (data.live) {
+          liveBtn.href = data.live;
+          liveBtn.style.display = 'inline-flex';
+        } else {
+          liveBtn.style.display = 'none';
+        }
+      }
 
       modalOverlay?.classList.add('active');
       document.body.style.overflow = 'hidden';
