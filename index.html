@@ -711,111 +711,101 @@
     <section class="section" id="contact" style="background-color: rgba(0, 0, 0, 0.15);">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Let's connect</span>
-          <h2 class="section-title">Start A Conversation</h2>
-          <p class="section-desc">Whether you have a project idea, a job opportunity, or just want to chat about code and research — my inbox is open.</p>
+          <span class="section-tag">Get in touch</span>
+          <h2 class="section-title">Let's Connect Directly</h2>
+          <p class="section-desc">Have an opportunity, project, or want to discuss research? Reach out directly through any of my verified channels below.</p>
         </div>
 
-        <div class="contact-grid">
-          <!-- Contact Info -->
-          <div class="contact-info-card">
-            <div class="contact-header">
-              <h3>Let's build something remarkable.</h3>
-              <p>I am actively available for software engineering roles, research collaborations, and select freelance opportunities.</p>
+        <div class="contact-direct-wrapper" style="max-width: 900px; margin: 0 auto;">
+          <!-- Top Hero Card in Contact -->
+          <div class="contact-highlight-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.75rem 2rem; text-align: center; margin-bottom: 2rem; box-shadow: var(--shadow-md);">
+            <div style="width: 62px; height: 62px; border-radius: 50%; background: var(--badge-bg); color: var(--accent-primary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.25rem;">
+              <i class="fa-regular fa-paper-plane"></i>
             </div>
-
-            <div class="contact-methods">
-              <!-- Email -->
-              <div class="contact-method-item">
-                <div class="method-icon"><i class="fa-regular fa-envelope"></i></div>
-                <div>
-                  <div class="method-label">Direct Email</div>
-                  <div class="method-val">fmuntasir488@gmail.com</div>
-                </div>
-                <button class="copy-btn" data-copy="fmuntasir488@gmail.com" title="Copy email">
-                  <i class="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-
-              <!-- Phone 1 -->
-              <div class="contact-method-item">
-                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
-                <div>
-                  <div class="method-label">Phone &amp; WhatsApp</div>
-                  <div class="method-val">+880 1581876432</div>
-                </div>
-                <a href="tel:+8801581876432" class="copy-btn" title="Call directly">
-                  <i class="fa-solid fa-phone-flip"></i> Call
-                </a>
-              </div>
-
-              <!-- Phone 2 -->
-              <div class="contact-method-item">
-                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
-                <div>
-                  <div class="method-label">Alternative Phone</div>
-                  <div class="method-val">+880 1629857561</div>
-                </div>
-                <a href="tel:+8801629857561" class="copy-btn" title="Call directly">
-                  <i class="fa-solid fa-phone-flip"></i> Call
-                </a>
-              </div>
-
-              <!-- Location -->
-              <div class="contact-method-item">
-                <div class="method-icon"><i class="fa-solid fa-map-pin"></i></div>
-                <div>
-                  <div class="method-label">Location</div>
-                  <div class="method-val">Banasree, Rampura, Dhaka, Bangladesh</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="https://github.com/fahim-m30" target="_blank" class="social-btn" title="GitHub Profile" rel="noopener">
-                <i class="fa-brands fa-github"></i>
+            <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.6rem;">Let's build something remarkable.</h3>
+            <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 1.75rem auto; font-size: 1rem; line-height: 1.7;">
+              I am actively open to full-time Software Engineering roles, research collaborations in Federated Learning &amp; AI, and select high-impact projects.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <a href="mailto:fmuntasir488@gmail.com" class="btn btn-primary" style="font-size: 1rem; padding: 0.85rem 1.75rem;">
+                <i class="fa-solid fa-envelope"></i> Send An Email
               </a>
-              <a href="https://linkedin.com/in/fahim-muntasir-086b0b26b" target="_blank" class="social-btn" title="LinkedIn Profile" rel="noopener">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="mailto:fmuntasir488@gmail.com" class="social-btn" title="Email Fahim">
-                <i class="fa-regular fa-envelope"></i>
-              </a>
-              <a href="https://wa.me/8801581876432" target="_blank" class="social-btn" title="WhatsApp Chat" rel="noopener">
-                <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/8801581876432" target="_blank" class="btn btn-outline" style="font-size: 1rem; padding: 0.85rem 1.75rem; border-color: rgba(37, 211, 102, 0.4); color: #25d366;" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
               </a>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="contact-form-card">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+          <!-- Channel Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
+            <!-- Email Card -->
+            <div class="contact-method-item" style="padding: 1.25rem;">
+              <div class="method-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div style="flex-grow: 1; min-width: 0;">
+                <div class="method-label">Direct Email</div>
+                <div class="method-val" style="font-size: 0.88rem;">fmuntasir488@gmail.com</div>
               </div>
-
-              <div class="form-group">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" id="email" class="form-input" placeholder="e.g. sarah@company.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" id="subject" class="form-input" placeholder="Project Inquiry / Job Opportunity / Tech Discussion" required>
-              </div>
-
-              <div class="form-group">
-                <label for="message" class="form-label">Message</label>
-                <textarea id="message" class="form-textarea" placeholder="Hi Fahim, I would love to connect with you regarding..." required></textarea>
-              </div>
-
-              <div id="form-status" style="margin-bottom: 1rem; font-size: 0.9rem;"></div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                <i class="fa-regular fa-paper-plane"></i> Send Message
+              <button class="copy-btn" data-copy="fmuntasir488@gmail.com" title="Copy email">
+                <i class="fa-regular fa-copy"></i> Copy
               </button>
-            </form>
+            </div>
+
+            <!-- WhatsApp & Phone 1 -->
+            <div class="contact-method-item" style="padding: 1.25rem;">
+              <div class="method-icon" style="color: #25d366;"><i class="fa-brands fa-whatsapp"></i></div>
+              <div style="flex-grow: 1;">
+                <div class="method-label">WhatsApp &amp; Call</div>
+                <div class="method-val">+880 1581876432</div>
+              </div>
+              <a href="https://wa.me/8801581876432" target="_blank" class="copy-btn" title="Open WhatsApp" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Chat
+              </a>
+            </div>
+
+            <!-- Phone 2 -->
+            <div class="contact-method-item" style="padding: 1.25rem;">
+              <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+              <div style="flex-grow: 1;">
+                <div class="method-label">Alternative Phone</div>
+                <div class="method-val">+880 1629857561</div>
+              </div>
+              <a href="tel:+8801629857561" class="copy-btn" title="Call directly">
+                <i class="fa-solid fa-phone-flip"></i> Call
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-method-item" style="padding: 1.25rem;">
+              <div class="method-icon" style="color: #0a66c2;"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div style="flex-grow: 1;">
+                <div class="method-label">LinkedIn</div>
+                <div class="method-val">Fahim Muntasir</div>
+              </div>
+              <a href="https://linkedin.com/in/fahim-muntasir-086b0b26b" target="_blank" class="copy-btn" title="View LinkedIn" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
+              </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-method-item" style="padding: 1.25rem;">
+              <div class="method-icon"><i class="fa-brands fa-github"></i></div>
+              <div style="flex-grow: 1;">
+                <div class="method-label">GitHub</div>
+                <div class="method-val">github.com/fahim-m30</div>
+              </div>
+              <a href="https://github.com/fahim-m30" target="_blank" class="copy-btn" title="View GitHub" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit
+              </a>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-method-item" style="padding: 1.25rem;">
+              <div class="method-icon" style="color: #ef4444;"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div style="flex-grow: 1;">
+                <div class="method-label">Location</div>
+                <div class="method-val">Banasree, Rampura, Dhaka</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

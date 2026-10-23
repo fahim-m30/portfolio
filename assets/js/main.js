@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Fahim Muntasir - Portfolio Interactive Engine
  * Natural, responsive, human-oriented micro-interactions
  */
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initProjectModal();
   initTerminal();
-  initContactForm();
   initCopyButtons();
 });
 
@@ -397,39 +396,4 @@ function initCopyButtons() {
       toast.classList.remove('show');
     }, 3200);
   }
-}
-
-/* ==========================================================================
-   8. Contact Form Handler (Direct & Mailto option)
-   ========================================================================== */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const formStatus = document.getElementById('form-status');
-
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim() || 'Portfolio Inquiry';
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !message) {
-      if (formStatus) {
-        formStatus.innerHTML = '<span style="color: #ef4444;">Please fill in all required fields.</span>';
-      }
-      return;
-    }
-
-    // Launch user's default email client pre-filled
-    const mailtoUri = `mailto:fmuntasir488@gmail.com?subject=${encodeURIComponent(subject + ' - from ' + name)}&body=${encodeURIComponent(message + '\n\nSent by: ' + name + ' (' + email + ')')}`;
-    
-    if (formStatus) {
-      formStatus.innerHTML = '<span style="color: #10b981;"><i class="fa-solid fa-circle-check"></i> Thank you, ' + name + '! Launching your email client...</span>';
-    }
-
-    setTimeout(() => {
-      window.location.href = mailtoUri;
-      form.reset();
-    }, 600);
-  });
 }
