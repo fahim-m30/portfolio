@@ -216,18 +216,20 @@ const projectDetails = {
     repo: 'https://github.com/fahim-m30'
   },
   'federated-ids': {
-    title: 'Federated Intrusion Detection Framework (IEEE SPICSCON 2026)',
-    tagline: 'Privacy-preserving network security against class-imbalanced cyber attacks',
-    problem: 'Network intrusion datasets are heavily skewed (majority normal traffic, minute minority of sophisticated attacks), causing standard machine learning models to fail on zero-day intrusions. Moreover, transmitting sensitive network logs to a central server violates data privacy regulations.',
-    solution: 'Designed a novel framework pairing synthetic oversampling (SMOTE variations) with Federated Learning (FL). Participating nodes train collaborative models locally without ever transferring raw network traffic.',
+    title: 'A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks',
+    tagline: '2026 IEEE SPICSCON (BAUET, Bangladesh) • Snaholata Mondal, Md. Julker Nain Rakib, Fahim Muntasir',
+    problem: 'Benchmark intrusion detection datasets (CIC-UNSW-NB15 and CICIDS2017) exhibit acute class imbalance where rare, sophisticated attacks are vastly outnumbered by benign traffic. In decentralized network environments, statistical client heterogeneity and privacy restrictions prevent pooling raw telemetry, causing conventional models to overlook zero-day attacks.',
+    solution: 'Designed and evaluated a hybrid federated intrusion detection framework combining 3 synthetic oversampling techniques (SMOTE, SMOTE-Tomek, GAN-based SMOTE) with 6 federated learning optimization algorithms (FedAvg, FedProx, FedDyn, SCAFFOLD, DP-Fed, FedOpt). Added SHAP and LIME for transparent model explainability.',
     features: [
-      'Tackled acute class imbalance in heterogeneous network telemetry.',
-      'Privacy-preserving local gradient aggregation across distributed clients.',
-      'Significantly higher F1-score and minority attack recall compared to centralized baselines.',
-      'Presented at IEEE SPICSCON 2026 conference.'
+      'Comparative benchmarking across individual (CICIDS2017, CIC-UNSW-NB15) and merged heterogeneous datasets.',
+      'Comprehensive evaluation of 6 FL optimization algorithms with client drift mitigation and Differential Privacy.',
+      'Achieved up to 0.9997 F1-score on minority attack vector detection while strictly preserving local client data privacy.',
+      'Model interpretability via SHAP (global feature importance) and LIME (local instance predictions).',
+      'Presented at 2026 IEEE International Conference on Signal Processing, Information, Communication and Systems (SPICSCON).'
     ],
-    tech: ['Python', 'Federated Learning', 'Deep Learning', 'Scikit-learn', 'Data Preprocessing'],
-    repo: 'https://github.com/fahim-m30'
+    tech: ['Python', 'Federated Learning (6 Alg.)', 'GAN-based SMOTE', 'PyTorch / TensorFlow', 'SHAP & LIME (XAI)', 'Differential Privacy'],
+    repo: 'https://github.com/fahim-m30',
+    live: 'assets/papers/ieee-spicscon-2026-federated-ids.pdf'
   },
   'alzheimer-mri': {
     title: 'Explainable AI for Multi-Class Alzheimer’s Disease Severity',
@@ -454,11 +456,13 @@ function initSpotlightCards() {
    ========================================================================== */
 function initBibtexButtons() {
   const bibtexBtns = document.querySelectorAll('.bibtex-btn');
-  const bibtexEntry = `@inproceedings{muntasir2026hybrid,
-  author    = {Muntasir, Fahim and others},
+  const bibtexEntry = `@inproceedings{mondal2026hybrid,
+  author    = {Mondal, Snaholata and Rakib, Md. Julker Nain and Muntasir, Fahim},
   title     = {A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks},
-  booktitle = {Proceedings of the IEEE SPICSCON 2026},
-  year      = {2026}
+  booktitle = {2026 IEEE International Conference on Signal Processing, Information, Communication and Systems (SPICSCON)},
+  pages     = {1--6},
+  year      = {2026},
+  organization = {IEEE}
 }`;
 
   bibtexBtns.forEach(btn => {
