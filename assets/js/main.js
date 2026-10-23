@@ -442,7 +442,7 @@ function initSpotlightCards() {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      card.style.background = `radial-gradient(circle 320px at ${x}px ${y}px, rgba(99, 102, 241, 0.09), var(--bg-card) 70%)`;
+      card.style.background = `radial-gradient(circle 320px at ${x}px ${y}px, rgba(245, 158, 11, 0.08), var(--bg-card) 70%)`;
     });
 
     card.addEventListener('mouseleave', () => {
