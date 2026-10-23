@@ -1,6 +1,6 @@
 /**
  * Fahim Muntasir - Portfolio Interactive Engine
- * Natural, responsive, human-oriented micro-interactions
+ * Ultra-Premium, Tactile Micro-Interactions & Performance
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModal();
   initTerminal();
   initCopyButtons();
+  initKeyboardShortcuts();
+  initSpotlightCards();
+  initBibtexButtons();
 });
 
 /* ==========================================================================
@@ -22,18 +25,22 @@ function initTheme() {
   const storedTheme = localStorage.getItem('fahim_theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'dark'); // default dark
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'dark');
   document.documentElement.setAttribute('data-theme', initialTheme);
   updateThemeIcon(initialTheme, themeIcon);
 
-  themeToggle?.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('fahim_theme', newTheme);
-    updateThemeIcon(newTheme, themeIcon);
-  });
+  themeToggle?.addEventListener('click', toggleTheme);
+}
+
+function toggleTheme() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = themeToggle?.querySelector('i');
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('fahim_theme', newTheme);
+  updateThemeIcon(newTheme, themeIcon);
 }
 
 function updateThemeIcon(theme, iconEl) {
@@ -68,7 +75,6 @@ function initDhakaClock() {
         clockEl.textContent = dhakaTimeStr + ' (GMT+6)';
       }
 
-      // Dynamic friendly greeting
       if (greetingEl) {
         const hour = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Dhaka', hour: 'numeric', hour12: false }).format(now), 10);
         let greeting = 'Hello';
@@ -113,7 +119,6 @@ function initNavScroll() {
     });
   });
 
-  // Highlight active link on scroll
   window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section[id]');
@@ -153,7 +158,7 @@ function initProjectFilters() {
         const category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter || (filter === 'mern' && category.includes('mern'))) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
+          card.style.animation = 'fadeIn 0.35s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -311,12 +316,6 @@ function initProjectModal() {
     if (e.target === modalOverlay) closeModal();
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay?.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
   function closeModal() {
     modalOverlay?.classList.remove('active');
     document.body.style.overflow = '';
@@ -333,7 +332,7 @@ function initTerminal() {
 
   const terminalResponses = {
     'whoami': 'Fahim Muntasir — Software Engineer & Tech Researcher based in Dhaka, BD. Passionate about MERN stack systems and federated machine learning.',
-    'skills': 'Languages: Python, JavaScript, PHP, C/C++\nWeb: React, Next.js, Node.js, Express, Django, Tailwind CSS\nDatabases: MongoDB, MySQL, SQL\nSpecializations: Federated Learning, Class-Imbalance in ML, System Architecture.',
+    'skills': 'Languages: Python, Golang, JavaScript, PHP, C/C++\nWeb: React, Next.js, Node.js, Express, Django, Tailwind CSS\nDatabases: MongoDB, MySQL, SQL\nSpecializations: Federated Learning, Class-Imbalance in ML, System Architecture.',
     'research': '1. IEEE SPICSCON 2026: "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks."\n2. Submitted: "An Explainable Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity from Brain MRI."',
     'experience': 'Software Engineer Intern @ Zentura Agency (June 2026 – Sep 2026): Collaborated with agile teams to build scalable web apps, clean code standards, and agile sprint workflows.',
     'interests': 'Full-stack engineering, distributed systems, medical AI diagnostics, privacy-preserving machine learning, and clean maintainable codebases.',
@@ -380,8 +379,6 @@ function initTerminal() {
    ========================================================================== */
 function initCopyButtons() {
   const copyButtons = document.querySelectorAll('.copy-btn');
-  const toast = document.getElementById('toast');
-  const toastMessage = document.getElementById('toast-msg');
 
   copyButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -389,23 +386,90 @@ function initCopyButtons() {
       if (!textToCopy) return;
 
       navigator.clipboard.writeText(textToCopy).then(() => {
-        showToast(`Copied "${textToCopy}" to clipboard!`);
+        showGlobalToast(`Copied "${textToCopy}" to clipboard!`);
         btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
         setTimeout(() => {
           btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy';
         }, 2000);
       }).catch(() => {
-        showToast('Press Ctrl+C to copy');
+        showGlobalToast('Press Ctrl+C to copy');
       });
     });
   });
+}
 
-  function showToast(msg) {
-    if (!toast) return;
-    if (toastMessage) toastMessage.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3200);
-  }
+function showGlobalToast(msg) {
+  const toast = document.getElementById('toast');
+  const toastMessage = document.getElementById('toast-msg');
+  if (!toast) return;
+  if (toastMessage) toastMessage.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3200);
+}
+
+/* ==========================================================================
+   8. Keyboard Shortcuts (T for Theme, Esc for Modal)
+   ========================================================================== */
+function initKeyboardShortcuts() {
+  document.addEventListener('keydown', (e) => {
+    // If user is typing in an input or textarea, ignore
+    if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+
+    if (e.key === 't' || e.key === 'T') {
+      toggleTheme();
+      showGlobalToast('Switched Theme (Key: T)');
+    } else if (e.key === 'Escape') {
+      const modalOverlay = document.getElementById('project-modal');
+      if (modalOverlay?.classList.contains('active')) {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+}
+
+/* ==========================================================================
+   9. Spotlight Card Mouse-Tracking Effect (Linear.app Style)
+   ========================================================================== */
+function initSpotlightCards() {
+  const cards = document.querySelectorAll('.spotlight-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.background = `radial-gradient(circle 320px at ${x}px ${y}px, rgba(99, 102, 241, 0.09), var(--bg-card) 70%)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.background = 'var(--bg-card)';
+    });
+  });
+}
+
+/* ==========================================================================
+   10. BibTeX Citation Quick Copy
+   ========================================================================== */
+function initBibtexButtons() {
+  const bibtexBtns = document.querySelectorAll('.bibtex-btn');
+  const bibtexEntry = `@inproceedings{muntasir2026hybrid,
+  author    = {Muntasir, Fahim and others},
+  title     = {A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks},
+  booktitle = {Proceedings of the IEEE SPICSCON 2026},
+  year      = {2026}
+}`;
+
+  bibtexBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(bibtexEntry).then(() => {
+        showGlobalToast('Copied IEEE SPICSCON BibTeX Citation!');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> BibTeX Copied';
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fa-solid fa-quote-right"></i> Copy BibTeX';
+        }, 2500);
+      });
+    });
+  });
 }

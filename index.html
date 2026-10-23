@@ -63,8 +63,9 @@
           <span>Available for hire</span>
         </div>
 
-        <button class="theme-btn" id="theme-toggle" aria-label="Toggle Theme" title="Switch Theme">
+        <button class="theme-btn" id="theme-toggle" aria-label="Toggle Theme" title="Switch Theme (Shortcut: T)">
           <i class="fa-solid fa-sun"></i>
+          <span class="kbd-shortcut">T</span>
         </button>
 
         <a href="resume.html" target="_blank" class="btn btn-outline" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">
@@ -118,6 +119,12 @@
               <i class="fa-regular fa-clock"></i>
               <span id="dhaka-clock">Loading local time...</span>
             </div>
+          </div>
+
+          <!-- Currently / Now Card -->
+          <div class="now-card">
+            <span class="now-tag"><i class="fa-solid fa-satellite-dish"></i> Now</span>
+            <span>Researching Explainable Medical AI &amp; Federated Learning • Engineering scalable full-stack web applications.</span>
           </div>
         </div>
 
@@ -291,9 +298,14 @@
               <span class="tag-pill">Python</span>
             </div>
 
-            <a href="javascript:void(0)" class="research-link btn-details" data-project="federated-ids">
-              Read Detailed Breakdown <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div class="research-actions">
+              <a href="javascript:void(0)" class="research-link btn-details" data-project="federated-ids">
+                Read Detailed Breakdown <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <button class="bibtex-btn" title="Copy BibTeX Citation for IEEE SPICSCON 2026">
+                <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+              </button>
+            </div>
           </div>
 
           <!-- Publication 2 -->
@@ -347,19 +359,35 @@
         <div class="projects-grid" id="projects-grid">
 
           <!-- Project 1: Smart Playground -->
-          <div class="project-card" data-category="mern">
-            <div class="project-banner">
-              <i class="fa-solid fa-baseball-bat-ball banner-icon"></i>
-              <span class="project-category-badge">Full Stack • MERN</span>
-              <a href="https://smart-playground-booking-tournament.vercel.app/login.html" target="_blank" rel="noopener" style="position: absolute; top: 14px; right: 14px; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.18); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;">
-                <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span> Live App ↗
-              </a>
+          <div class="spotlight-card" data-category="mern">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span style="background: #ef4444;"></span>
+                  <span style="background: #f59e0b;"></span>
+                  <span style="background: #10b981;"></span>
+                </div>
+                <div class="browser-url">smart-playground.vercel.app</div>
+                <a href="https://smart-playground-booking-tournament.vercel.app/login.html" target="_blank" rel="noopener" style="margin-left: auto; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.18); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;">
+                  <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span> Live
+                </a>
+              </div>
+              <div class="browser-canvas">
+                <div class="mockup-preview-badge">
+                  <i class="fa-solid fa-baseball-bat-ball"></i>
+                  <span>Playground &amp; Tournament Hub</span>
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Smart Playground Booking &amp; Tournament Management</h3>
               <p class="project-desc">
                 Engineered a comprehensive facility booking and tournament scheduling platform optimized for cricket, football, and badminton turfs. Features dynamic slot locking, time-table calendar, and automated tournament brackets.
               </p>
+              <div class="project-metrics">
+                <span class="metric-pill"><i class="fa-solid fa-lock"></i> Zero-Collision Slot Locking</span>
+                <span class="metric-pill"><i class="fa-solid fa-trophy"></i> Automated Knockout Brackets</span>
+              </div>
               <div class="project-tech">
                 <span class="tech-chip">React.js</span>
                 <span class="tech-chip">Node.js</span>
@@ -369,7 +397,7 @@
               </div>
               <div class="project-actions">
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
-                  <a href="https://smart-playground-booking-tournament.vercel.app/login.html" target="_blank" class="btn-live-preview" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); text-decoration: none; transition: var(--transition);">
+                  <a href="https://smart-playground-booking-tournament.vercel.app/login.html" target="_blank" class="btn-live-preview" rel="noopener">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
                   </a>
                   <a href="javascript:void(0)" class="btn-details" data-project="playground">
@@ -386,19 +414,35 @@
           </div>
 
           <!-- Project 2: Shop Manager -->
-          <div class="project-card" data-category="mern">
-            <div class="project-banner">
-              <i class="fa-solid fa-store banner-icon"></i>
-              <span class="project-category-badge">Full Stack • MERN</span>
-              <a href="https://shop-manager-bd.vercel.app/" target="_blank" rel="noopener" style="position: absolute; top: 14px; right: 14px; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.18); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;">
-                <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span> Live App ↗
-              </a>
+          <div class="spotlight-card" data-category="mern">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span style="background: #ef4444;"></span>
+                  <span style="background: #f59e0b;"></span>
+                  <span style="background: #10b981;"></span>
+                </div>
+                <div class="browser-url">shop-manager-bd.vercel.app</div>
+                <a href="https://shop-manager-bd.vercel.app/" target="_blank" rel="noopener" style="margin-left: auto; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.18); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;">
+                  <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span> Live
+                </a>
+              </div>
+              <div class="browser-canvas">
+                <div class="mockup-preview-badge">
+                  <i class="fa-solid fa-store"></i>
+                  <span>Shop Manager POS &amp; Inventory</span>
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Shop Manager (Retail &amp; POS Suite)</h3>
               <p class="project-desc">
                 A robust retail management and inventory application featuring real-time stock deductions, point-of-sale (POS) billing, automated PDF invoice generation, and revenue performance analytics.
               </p>
+              <div class="project-metrics">
+                <span class="metric-pill"><i class="fa-solid fa-bolt"></i> &lt;500ms POS Billing</span>
+                <span class="metric-pill"><i class="fa-solid fa-chart-line"></i> Real-Time Stock Analytics</span>
+              </div>
               <div class="project-tech">
                 <span class="tech-chip">React.js</span>
                 <span class="tech-chip">Node.js</span>
@@ -408,7 +452,7 @@
               </div>
               <div class="project-actions">
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
-                  <a href="https://shop-manager-bd.vercel.app/" target="_blank" class="btn-live-preview" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35); text-decoration: none; transition: var(--transition);">
+                  <a href="https://shop-manager-bd.vercel.app/" target="_blank" class="btn-live-preview" rel="noopener">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
                   </a>
                   <a href="javascript:void(0)" class="btn-details" data-project="shop-manager">
@@ -425,16 +469,33 @@
           </div>
 
           <!-- Project 3: Online Flight Booking -->
-          <div class="project-card" data-category="systems">
-            <div class="project-banner">
-              <i class="fa-solid fa-plane-departure banner-icon"></i>
-              <span class="project-category-badge">Systems • PHP &amp; SQL</span>
+          <div class="spotlight-card" data-category="systems">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span style="background: #ef4444;"></span>
+                  <span style="background: #f59e0b;"></span>
+                  <span style="background: #10b981;"></span>
+                </div>
+                <div class="browser-url">systems/flight-booking</div>
+                <span style="margin-left: auto; font-size: 0.7rem; font-family: var(--font-mono); color: #94a3b8;">PHP &bull; SQL</span>
+              </div>
+              <div class="browser-canvas">
+                <div class="mockup-preview-badge">
+                  <i class="fa-solid fa-plane-departure"></i>
+                  <span>Global Flight Reservation Engine</span>
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Online Flight Booking Management System</h3>
               <p class="project-desc">
                 Architected a flight reservation platform with secure authentication, multi-criteria flight search algorithms, automated PDF boarding pass generation, and relational database modeling using DFDs.
               </p>
+              <div class="project-metrics">
+                <span class="metric-pill"><i class="fa-solid fa-ticket"></i> Automated PDF E-Ticketing</span>
+                <span class="metric-pill"><i class="fa-solid fa-diagram-project"></i> Relational DFD Architecture</span>
+              </div>
               <div class="project-tech">
                 <span class="tech-chip">PHP</span>
                 <span class="tech-chip">MySQL / SQL</span>
@@ -456,16 +517,33 @@
           </div>
 
           <!-- Project 4: Federated Intrusion Detection -->
-          <div class="project-card" data-category="research">
-            <div class="project-banner">
-              <i class="fa-solid fa-shield-virus banner-icon"></i>
-              <span class="project-category-badge">Research • ML</span>
+          <div class="spotlight-card" data-category="research">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span style="background: #ef4444;"></span>
+                  <span style="background: #f59e0b;"></span>
+                  <span style="background: #10b981;"></span>
+                </div>
+                <div class="browser-url">research/federated-ids</div>
+                <span style="margin-left: auto; font-size: 0.7rem; font-family: var(--font-mono); color: #38bdf8;">IEEE '26</span>
+              </div>
+              <div class="browser-canvas">
+                <div class="mockup-preview-badge">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Federated Network Security IDS</span>
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Federated Learning IDS Framework</h3>
               <p class="project-desc">
                 Machine learning framework solving severe class-imbalance in network intrusion detection through synthetic oversampling while preserving node privacy using decentralized Federated Learning.
               </p>
+              <div class="project-metrics">
+                <span class="metric-pill"><i class="fa-solid fa-shield-virus"></i> 100% Data Privacy Locality</span>
+                <span class="metric-pill"><i class="fa-solid fa-chart-simple"></i> F1-Score Imbalance Boost</span>
+              </div>
               <div class="project-tech">
                 <span class="tech-chip">Python</span>
                 <span class="tech-chip">Federated Learning</span>
@@ -487,16 +565,33 @@
           </div>
 
           <!-- Project 5: Secure Messaging Platform -->
-          <div class="project-card" data-category="systems">
-            <div class="project-banner">
-              <i class="fa-solid fa-lock banner-icon"></i>
-              <span class="project-category-badge">Security &amp; Web</span>
+          <div class="spotlight-card" data-category="systems">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span style="background: #ef4444;"></span>
+                  <span style="background: #f59e0b;"></span>
+                  <span style="background: #10b981;"></span>
+                </div>
+                <div class="browser-url">systems/secure-chat</div>
+                <span style="margin-left: auto; font-size: 0.7rem; font-family: var(--font-mono); color: #94a3b8;">PHP &bull; SQL</span>
+              </div>
+              <div class="browser-canvas">
+                <div class="mockup-preview-badge">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>Encrypted Web Messaging</span>
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Web-Based Secure Messaging Platform</h3>
               <p class="project-desc">
                 Scalable web messaging platform incorporating robust user verification, encrypted communication protocols, session security tokens, and responsive real-time conversation modules.
               </p>
+              <div class="project-metrics">
+                <span class="metric-pill"><i class="fa-solid fa-key"></i> Session-Level Cryptography</span>
+                <span class="metric-pill"><i class="fa-solid fa-comments"></i> Real-Time AJAX Polling</span>
+              </div>
               <div class="project-tech">
                 <span class="tech-chip">PHP</span>
                 <span class="tech-chip">SQL</span>
@@ -518,16 +613,33 @@
           </div>
 
           <!-- Project 6: Metrorail Membership Management -->
-          <div class="project-card" data-category="systems">
-            <div class="project-banner">
-              <i class="fa-solid fa-train-subway banner-icon"></i>
-              <span class="project-category-badge">Public Transit System</span>
+          <div class="spotlight-card" data-category="systems">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span style="background: #ef4444;"></span>
+                  <span style="background: #f59e0b;"></span>
+                  <span style="background: #10b981;"></span>
+                </div>
+                <div class="browser-url">systems/metrorail-transit</div>
+                <span style="margin-left: auto; font-size: 0.7rem; font-family: var(--font-mono); color: #94a3b8;">PHP &bull; MySQL</span>
+              </div>
+              <div class="browser-canvas">
+                <div class="mockup-preview-badge">
+                  <i class="fa-solid fa-train-subway"></i>
+                  <span>Metrorail Transit Operations</span>
+                </div>
+              </div>
             </div>
             <div class="project-body">
               <h3 class="project-title">Metrorail Membership Management System</h3>
               <p class="project-desc">
                 Centralized transit membership platform designed to efficiently manage large-scale commuter registrations, fare pass renewals, and transit administrative workflows with MySQL integrity.
               </p>
+              <div class="project-metrics">
+                <span class="metric-pill"><i class="fa-solid fa-users"></i> High-Concurrency Registrations</span>
+                <span class="metric-pill"><i class="fa-solid fa-database"></i> Relational Integrity</span>
+              </div>
               <div class="project-tech">
                 <span class="tech-chip">PHP</span>
                 <span class="tech-chip">MySQL</span>
@@ -569,6 +681,7 @@
             </div>
             <div class="skill-list">
               <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-badge"><i class="fa-brands fa-golang"></i> Go (Golang)</span>
               <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
               <span class="skill-badge"><i class="fa-brands fa-php"></i> PHP</span>
               <span class="skill-badge"><i class="fa-solid fa-c"></i> C / C++</span>
