@@ -171,6 +171,23 @@ function initProjectFilters() {
    5. Project Case Study Modal Data & Handlers
    ========================================================================== */
 const projectDetails = {
+  'restoos': {
+    title: 'RestoOS – Restaurant Management System & POS',
+    tagline: 'Enterprise-grade multi-actor restaurant ERP & POS solution with real-time operations',
+    problem: 'Multi-floor restaurants suffer from operational chaos between table waitstaff, kitchen delays, parcel delivery coordination, untracked raw material usage, and obscure monthly profit/loss accounting.',
+    solution: 'Engineered an end-to-end full-stack ERP in Next.js 16 (App Router), TypeScript, Tailwind CSS, and Prisma ORM. Built 5 dedicated role-specific portals (Admin, Cashier, Waiter, Kitchen KDS, Rider), interactive floor plans, automated recipe-level inventory deductions, and executive financial P&L reporting.',
+    features: [
+      'Multi-Actor Role Portals: Tailored, secure workspaces for Admin, Cashier, Floor Captain, Kitchen KDS, and Delivery Riders.',
+      'Interactive Table Floor Plan: Real-time table states (Ground Floor, 1st Floor Family, Rooftop Lounge, VIP Cabin) with instant KOT dispatch.',
+      'Kitchen Display System (KDS): Live kitchen order cards with color-coded timers (<10m Green, 10-20m Yellow, >20m Urgent Red).',
+      'Recipe-Linked Auto Inventory: Automatic raw stock deduction upon item sale with Goods Received Notes (GRN) and low-stock alerts.',
+      'Staff Payroll & Attendance: Daily attendance logging, advance salary deductions, overtime bonus calculation, and one-click pay-slips.',
+      'Executive P&L Statement: Real-time financial ledger calculating Total Revenue - COGS = Gross Profit - Payroll - Operating Expenses = True Net Profit.'
+    ],
+    tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Prisma ORM', 'Recharts', 'Lucide Icons'],
+    repo: 'https://github.com/fahim-m30/Restaurant-Management-System',
+    live: 'https://github.com/fahim-m30/Restaurant-Management-System'
+  },
   'playground': {
     title: 'Smart Playground Booking & Tournament Management',
     tagline: 'Streamlining community sports reservations & competitive tournaments',
@@ -333,8 +350,8 @@ function initTerminal() {
   if (!terminalBody) return;
 
   const terminalResponses = {
-    'whoami': 'Fahim Muntasir — Software Engineer & Tech Researcher based in Dhaka, BD. Passionate about MERN stack systems and federated machine learning.',
-    'skills': 'Languages: Python, Golang, JavaScript, PHP, C/C++\nWeb: React, Next.js, Node.js, Express, Django, Tailwind CSS\nDatabases: MongoDB, MySQL, SQL\nSpecializations: Federated Learning, Class-Imbalance in ML, System Architecture.',
+    'whoami': 'Fahim Muntasir — Software Engineer & Tech Researcher based in Dhaka, BD. Passionate about Next.js & MERN stack systems, scalable enterprise ERPs, and federated machine learning.',
+    'skills': 'Languages: Python, Golang, TypeScript, JavaScript, PHP, C/C++\nWeb: Next.js 16, React, Node.js, Express, Django, Tailwind CSS\nDatabases: PostgreSQL, Prisma, MongoDB, MySQL, SQL\nSpecializations: Multi-Actor ERP Systems, Federated Learning, Class-Imbalance in ML, High-Performance APIs.',
     'research': '1. IEEE SPICSCON 2026: "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks."\n2. Submitted: "An Explainable Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity from Brain MRI."',
     'experience': 'Software Engineer Intern @ Zentura Agency (June 2026 – Sep 2026): Collaborated with agile teams to build scalable web apps, clean code standards, and agile sprint workflows.',
     'interests': 'Full-stack engineering, distributed systems, medical AI diagnostics, privacy-preserving machine learning, and clean maintainable codebases.',
