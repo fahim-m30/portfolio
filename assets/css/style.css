@@ -30,7 +30,7 @@
   --accent-cyan: #38bdf8;
   
   --badge-bg: rgba(245, 158, 11, 0.12);
-  --badge-text: #fde68a;
+  --badge-text: #fbbf24;
   --badge-border: rgba(245, 158, 11, 0.25);
   
   --nav-bg: rgba(13, 11, 9, 0.88);
@@ -771,7 +771,7 @@ button {
   font-size: 0.74rem;
   background: rgba(245, 158, 11, 0.08);
   border: 1px solid rgba(245, 158, 11, 0.18);
-  color: #fde68a;
+  color: #fbbf24;
   padding: 0.25rem 0.6rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -1095,13 +1095,20 @@ button {
 }
 
 .metric-pill {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-sm);
-  background: rgba(245, 158, 11, 0.09);
-  color: #fde68a;
-  border: 1px solid rgba(245, 158, 11, 0.22);
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.metric-pill i {
+  color: #f59e0b;
 }
 
 .project-tech {
@@ -1114,11 +1121,81 @@ button {
 .tech-chip {
   font-size: 0.74rem;
   font-family: var(--font-mono);
-  padding: 0.2rem 0.6rem;
+  padding: 0.22rem 0.6rem;
   border-radius: var(--radius-sm);
   background: var(--bg-surface);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   border: 1px solid var(--border-color);
+  font-weight: 500;
+}
+
+/* Light Theme Overrides for Crystal-Clear Visibility & High Contrast */
+[data-theme="light"] .metric-pill {
+  background: #fdf2db;
+  color: #853706;
+  border: 1px solid #d99b38;
+  font-weight: 700;
+}
+
+[data-theme="light"] .metric-pill i {
+  color: #b45309;
+}
+
+[data-theme="light"] .tech-chip {
+  background: #ece1d2;
+  color: #24190e;
+  border: 1px solid #c9b69f;
+  font-weight: 600;
+}
+
+[data-theme="light"] .browser-mockup {
+  background: linear-gradient(180deg, #f7f1e7 0%, #ebe0d0 100%);
+  border-bottom: 1px solid rgba(90, 60, 30, 0.15);
+}
+
+[data-theme="light"] .browser-bar {
+  background: rgba(242, 233, 222, 0.95);
+  border-bottom: 1px solid rgba(90, 60, 30, 0.12);
+}
+
+[data-theme="light"] .browser-url {
+  color: #4a3828;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(90, 60, 30, 0.15);
+}
+
+[data-theme="light"] .mockup-preview-badge {
+  background: rgba(180, 83, 9, 0.08);
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  color: #261e16;
+  font-weight: 600;
+}
+
+[data-theme="light"] .mockup-preview-badge i {
+  color: #b45309;
+}
+
+[data-theme="light"] .term-chip {
+  background: #fdf2db;
+  border: 1px solid #d99b38;
+  color: #853706;
+  font-weight: 600;
+}
+
+[data-theme="light"] .term-chip:hover {
+  background: #b45309;
+  color: #ffffff;
+}
+
+[data-theme="light"] .skill-badge {
+  background: #ece1d2;
+  color: #261e16;
+  border: 1px solid #c9b69f;
+  font-weight: 600;
+}
+
+[data-theme="light"] .skill-badge i {
+  color: #b45309;
 }
 
 .project-actions {
