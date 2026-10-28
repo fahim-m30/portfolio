@@ -171,6 +171,23 @@ function initProjectFilters() {
    5. Project Case Study Modal Data & Handlers
    ========================================================================== */
 const projectDetails = {
+  'blueprint': {
+    title: 'Blueprint Learning Academy – EdTech & LMS Platform',
+    tagline: 'Full-stack course management with dual student/admin portals & automated bKash/Nagad verification',
+    problem: 'Independent educators and training academies often lack automated student enrollment workflows, relying on chaotic manual WhatsApp payments, untracked homework submissions, and insecure login distribution.',
+    solution: 'Architected an end-to-end full-stack academy portal using Next.js 14 (App Router), TypeScript, Express.js, MongoDB (Mongoose), and Tailwind CSS. Features automated bKash/Nagad/Rocket TrxID validation, student credential email dispatch, embedded video lectures, live Google Meet sessions, assignment submissions with grading, and scheduled background expiration cleanup.',
+    features: [
+      'Dual Actor Workspaces: Tailored Student Learning Dashboard and dynamic Admin Management Portal.',
+      '3-Step Enrollment & Payment: Interactive bKash, Nagad & Rocket manual TrxID payment validation wizard.',
+      'Automated Credential Dispatch: Generates student credentials and dispatches rich HTML confirmation emails with login links and WhatsApp batch invite.',
+      'Learning Hub: Embedded video lectures with notes, Google Meet live class schedules, and interactive task submissions with instructor feedback.',
+      'Admin Control Suite: Dynamic analytics (revenue, students, courses), student account pause/block with notification emails, and editable payment numbers.',
+      'Background Cron Automation: Scheduled expiration cleanup permanently removes expired course enrollments and associated records.'
+    ],
+    tech: ['Next.js 14', 'TypeScript', 'Express.js', 'MongoDB', 'Tailwind CSS', 'RESTful APIs', 'Nodemailer'],
+    repo: 'https://github.com/fahim-m30/Blueprint-Learning-Academy',
+    live: 'https://blueprint-learning-academy.vercel.app'
+  },
   'restoos': {
     title: 'RestoOS – Restaurant Management System & POS',
     tagline: 'Enterprise-grade multi-actor restaurant ERP & POS solution with real-time operations',
@@ -351,7 +368,7 @@ function initTerminal() {
 
   const terminalResponses = {
     'whoami': 'Fahim Muntasir — Software Engineer & Tech Researcher based in Dhaka, BD. Passionate about Next.js & MERN stack systems, scalable enterprise ERPs, and federated machine learning.',
-    'skills': 'Languages: Python, Golang, TypeScript, JavaScript, PHP, C/C++\nWeb: Next.js 16, React, Node.js, Express, Django, Tailwind CSS\nDatabases: PostgreSQL, Prisma, MongoDB, MySQL, SQL\nSpecializations: Multi-Actor ERP Systems, Federated Learning, Class-Imbalance in ML, High-Performance APIs.',
+    'skills': 'Languages: Python, Golang, TypeScript, JavaScript, PHP, C/C++\nWeb: Next.js 14/16, React, Node.js, Express, Django, Tailwind CSS\nDatabases: MongoDB, PostgreSQL, Prisma, MySQL, SQL\nSpecializations: EdTech LMS & ERP Systems, Federated Learning, Class-Imbalance in ML, High-Performance APIs.',
     'research': '1. IEEE SPICSCON 2026: "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks."\n2. Submitted: "An Explainable Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity from Brain MRI."',
     'experience': 'Software Engineer Intern @ Zentura Agency (June 2026 – Sep 2026): Collaborated with agile teams to build scalable web apps, clean code standards, and agile sprint workflows.',
     'interests': 'Full-stack engineering, distributed systems, medical AI diagnostics, privacy-preserving machine learning, and clean maintainable codebases.',
