@@ -371,7 +371,7 @@ function initTerminal() {
     'skills': 'Languages: Python, Golang, TypeScript, JavaScript, PHP, C/C++\nWeb: Next.js 14/16, React, Node.js, Express, Django, Tailwind CSS\nDatabases: MongoDB, PostgreSQL, Prisma, MySQL, SQL\nSpecializations: EdTech LMS & ERP Systems, Federated Learning, Class-Imbalance in ML, High-Performance APIs.',
     'research': '1. IEEE SPICSCON 2026: "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks."\n2. Submitted: "An Explainable Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity from Brain MRI."',
     'experience': 'Software Engineer Intern @ Zentura Agency (June 2026 – Sep 2026): Collaborated with agile teams to build scalable web apps, clean code standards, and agile sprint workflows.',
-    'interests': 'Full-stack engineering, distributed systems, medical AI diagnostics, privacy-preserving machine learning, and clean maintainable codebases.',
+    'interests': 'Full-stack engineering, distributed systems, medical AI diagnostics, 2D animation & creative content, and clean maintainable codebases.',
     'contact': 'Email: fmuntasir488@gmail.com\nPhone: +880 1581876432, +880 1629857561\nGitHub: github.com/fahim-m30\nLinkedIn: linkedin.com/in/fahim-muntasir-086b0b26b',
     'clear': '__CLEAR__'
   };
