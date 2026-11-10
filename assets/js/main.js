@@ -279,6 +279,22 @@ const projectDetails = {
     tech: ['Python', 'CNNs / Deep Learning', 'Grad-CAM', 'Medical Imaging', 'PyTorch/TensorFlow'],
     repo: 'https://github.com/fahim-m30'
   },
+  'fetal-head-biometry': {
+    title: 'Ellipse-Constrained Fetal Head Biometry with Uncertainty-Based Referral',
+    tagline: 'Geometry-constrained deep learning (BPGA-Net) & uncertainty triage for prenatal fetal ultrasound biometry',
+    problem: 'Routine prenatal ultrasound is essential for monitoring fetal growth and calculating Gestational Age (GA), but automated head biometry suffers from acoustic shadowing (lateral parietal bone drop-outs), speckle noise, and catastrophic boundary errors without clinical uncertainty safeguards.',
+    solution: 'Engineered BPGA-Net (Boundary-Prior Guided Attention Network), coupling a morphological boundary decoder with edge-informed attention gating and a differentiable geometric ellipse loss (Lgeom) derived from second-order central shape moments, combined with Monte Carlo Dropout uncertainty triage.',
+    features: [
+      'Morphological boundary decoder with edge-informed attention gating to recover acoustic shadowing drop-out cranial boundaries.',
+      'Differentiable geometric ellipse loss (Lgeom) enforcing elliptical anatomical priors on the segmented fetal skull.',
+      'Evaluated on 201 held-out HC18 clinical scans: achieved 96.27% Dice (p < 10⁻¹⁰ over U-Net) and reduced median Head Circumference (HC) error by 17% (2.00 mm down to 1.66 mm).',
+      'Accurate Gestational Age (GA) estimation via Hadlock’s formula (median absolute difference of just 0.94 days).',
+      'Monte Carlo Dropout skull-rim uncertainty triage routing the 10% most ambiguous scans to expert sonographers, lowering autonomous mean HC error to 2.72 mm.',
+      'Submitted to ICEEICT 2027 (Paper ID: 3118) in Biomedical Engineering / Biomedical Imaging.'
+    ],
+    tech: ['PyTorch', 'BPGA-Net', 'Ultrasound Biometry', 'Geometric Moments', 'Monte Carlo Dropout', 'HC18 Dataset', 'Biomedical Imaging'],
+    repo: 'https://github.com/fahim-m30'
+  },
   'secure-messenger': {
     title: 'Web-Based Secure Messaging Platform',
     tagline: 'Encrypted communication with session integrity',
@@ -369,7 +385,7 @@ function initTerminal() {
   const terminalResponses = {
     'whoami': 'Fahim Muntasir — Software Engineer & Tech Researcher based in Dhaka, BD. Passionate about Next.js & MERN stack systems, scalable enterprise ERPs, and federated machine learning.',
     'skills': 'Languages: Python, Golang, TypeScript, JavaScript, PHP, C/C++\nWeb: Next.js 14/16, React, Node.js, Express, Django, Tailwind CSS\nDatabases: MongoDB, PostgreSQL, Prisma, MySQL, SQL\nSpecializations: EdTech LMS & ERP Systems, Federated Learning, Class-Imbalance in ML, High-Performance APIs.',
-    'research': '1. IEEE SPICSCON 2026: "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks."\n2. Submitted: "An Explainable Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity from Brain MRI."',
+    'research': '1. ICEEICT 2027 (Under Review, ID #3118): "Ellipse-Constrained Fetal Head Biometry with Uncertainty-Based Referral."\n2. IEEE SPICSCON 2026: "A Hybrid Synthetic Oversampling and Federated Learning Framework for Class-Imbalanced Intrusion Detection in Heterogeneous Networks."\n3. Medical Imaging Journal (Submitted): "An Explainable Deep Learning Framework for Multi-Class Alzheimer’s Disease Severity from Brain MRI."',
     'experience': '1. Software Engineer Intern @ Zentura Agency (June 2026 – Sep 2026)\n2. Grameenphone Academy: Content Creation with 2D Animation Certification (Nov 2026)\n3. Generative AI Bootcamp (June 2026) & Arena Web Security (2025).',
     'interests': 'Full-stack engineering, distributed systems, medical AI diagnostics, 2D animation & creative content, and clean maintainable codebases.',
     'contact': 'Email: fmuntasir488@gmail.com\nPhone: +880 1581876432, +880 1629857561\nGitHub: github.com/fahim-m30\nLinkedIn: linkedin.com/in/fahim-muntasir-086b0b26b',
